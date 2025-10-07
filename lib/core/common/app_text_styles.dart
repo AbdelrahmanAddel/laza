@@ -26,4 +26,10 @@ class AppTextStyle {
     fontSize: 15,
     color: AppColors.grey,
   );
+  static const TextStyle we500Si13CollightGrey = TextStyle(
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w500,
+    fontSize: 13,
+    color: AppColors.lightGrey,
+  );
 }

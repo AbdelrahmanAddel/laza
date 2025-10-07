@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:laza/common/app_text_styles.dart';
+import 'package:laza/core/common/app_text_styles.dart';
 import 'package:laza/core/constants/assets.dart';
 
 class CustomBottomNavigationBar extends StatelessWidget {

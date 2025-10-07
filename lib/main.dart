@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:laza/features/main/presentation/screen/main_screen.dart';
+import 'package:laza/di/dependency_injection.dart';
+import 'package:laza/features/add_review/presentation/screens/add_review_screen.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  setup();
   runApp(LazaApp());
 }
 
@@ -18,7 +21,8 @@ class LazaApp extends StatelessWidget {
       splitScreenMode: true,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: MainScreen()),
+        home:   AddReviewScreen(productId: '', userId: '',)
+        ),
     );
   }
 }

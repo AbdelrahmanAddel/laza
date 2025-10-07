@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:laza/common/app_text_styles.dart';
-import 'package:laza/core/constants/assets.dart';
-import 'package:laza/core/helper/spaceing.dart';
+import 'package:laza/core/common/app_text_styles.dart';
+import 'package:laza/core/helper/spacing.dart';
 import 'package:laza/features/home/presentation/widgets/brand_list.dart';
+import 'package:laza/features/home/presentation/widgets/home_screen_header.dart';
 import 'package:laza/features/home/presentation/widgets/home_screen_search_bar.dart';
 import 'package:laza/features/home/presentation/widgets/product_list.dart';
 
@@ -20,7 +19,7 @@ class HomeScreenBody extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              _homeScreenHeader(),
+              HomeScreenHeader(),
               verticalSpace(20),
               Text('Hello', style: AppTextStyle.we600Si28ColText),
               verticalSpace(5),
@@ -68,13 +67,6 @@ class HomeScreenBody extends StatelessWidget {
     );
   }
 
-  Widget _homeScreenHeader() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        SvgPicture.asset(Assets.imagesSvgMenuIcon),
-        SvgPicture.asset(Assets.imagesSvgCartIcon),
-      ],
-    );
-  }
+ 
 }
+

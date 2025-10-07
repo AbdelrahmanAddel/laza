@@ -41,6 +41,11 @@ dependencies:
   flutter_svg: ^2.2.1
   flutter_native_splash: ^2.4.6
   flutter_screenutil: ^5.9.3
+  flutter_bloc: ^9.1.1
+  get_it: ^8.2.0
+  json_annotation: ^4.9.0
+  pretty_dio_logger: ^1.4.0
+  readmore: ^3.0.0
 
 dev_dependencies:
   flutter_test:

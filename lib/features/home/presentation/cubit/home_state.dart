@@ -4,16 +4,16 @@ sealed class HomeState {}
 
 final class HomeInitial extends HomeState {}
 
-final class HomeLoading extends HomeState {}
+final class LoadingToLoadHomeProduct extends HomeState {}
 
-final class HomeSuccess extends HomeState {
+final class HomeProductsLoaded extends HomeState {
   final List<Product>? products;
 
-  HomeSuccess({required this.products});
+  HomeProductsLoaded({required this.products});
 }
 
-final class HomeError extends HomeState {
+final class ErrorToLoadHomeProduct extends HomeState {
   final String message;
 
-  HomeError({required this.message});
+  ErrorToLoadHomeProduct({required this.message});
 }

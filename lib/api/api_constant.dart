@@ -1,6 +1,8 @@
 class ApiConstant {
   static const String baseUrl = "https://accessories-eshop.runasp.net/";
   static const String productEndPoint = "api/products";
+  static const String categoryEndPoint = "api/categories";
+  static const String reviewsEndPoint = "api/reviews";
 }
 class ErrorKeys{
   static const String type = "type";

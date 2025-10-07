@@ -4,6 +4,8 @@ class Assets {
   
   static const String imagesPngSplashScreen = "assets/images/png/splashScreen.png";
 
+  static const String imagesSvgBackIcon = "assets/images/svg/backIcon.svg";
+
   static const String imagesSvgCart = "assets/images/svg/cart.svg";
 
   static const String imagesSvgCartIcon = "assets/images/svg/cartIcon.svg";

@@ -8,14 +8,14 @@ class HomeCubit extends Cubit<HomeState> {
   final HomeRepository homeRepository;
 
   Future<void> getProducts() async {
-    emit(HomeLoading());
+    emit(LoadingToLoadHomeProduct());
     try {
       final products = await homeRepository.getProducts();
-      emit(HomeSuccess(products: products));
+      emit(HomeProductsLoaded(products: products));
     } on ServerException catch (errors) {
-      emit(HomeError(message: errors.errorModel.detail ?? ''));
+      emit(ErrorToLoadHomeProduct(message: errors.errorModel.detail ?? ''));
     } catch (error) {
-      emit(HomeError(message: "SomeThing Wen't Wrong"));
+      emit(ErrorToLoadHomeProduct(message: "SomeThing Wen't Wrong"));
     }
   }
 }
