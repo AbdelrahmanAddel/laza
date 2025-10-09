@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:laza/core/constants/assets.dart';
 import 'package:laza/core/helper/spacing.dart';
+import 'package:laza/features/login/presentation/controllers/login_controllers.dart';
 import 'package:laza/features/login/presentation/widgets/login_header.dart';
 import 'package:laza/features/login/presentation/widgets/login_form_fields.dart';
 import 'package:laza/features/login/presentation/widgets/login_forget_password.dart';
@@ -11,7 +12,8 @@ import 'package:laza/features/login/presentation/widgets/term_and_condition.dart
 import 'package:laza/features/login/presentation/widgets/login_bloc_listener.dart';
 
 class LoginScreenBody extends StatelessWidget {
-  const LoginScreenBody({super.key});
+  const LoginScreenBody({super.key, required this.controllers});
+  final LoginControllers controllers;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,7 @@ class LoginScreenBody extends StatelessWidget {
               SvgPicture.asset(Assets.imagesSvgBackIcon),
               LoginHeader(),
               verticalSpace(164),
-              LoginFormFields(),
+              LoginFormFields(controllers: controllers,),
               verticalSpace(30),
               LoginForgetPassword(),
               verticalSpace(40),

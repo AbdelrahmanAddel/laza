@@ -40,14 +40,16 @@ class _AddReviewScreenState extends State<AddReviewScreen> {
         bottomNavigationBar: CustomMaterialButton(
           text: 'Submit Review',
           onPressed: () async {
-            getIt<AddReviewCubit>().addReview(
-              widget.productId,
-              AddReviewRequest(
-                productId: widget.productId,
-                comment: controller.commentController.text,
-                rating: controller.rating.floor(),
-              ),
-            );
+            if (controller.formKey.currentState!.validate()) {
+              getIt<AddReviewCubit>().addReview(
+                widget.productId,
+                AddReviewRequest(
+                  productId: widget.productId,
+                  comment: controller.commentController.text,
+                  rating: controller.rating.floor(),
+                ),
+              );
+            }
           },
         ),
         backgroundColor: Colors.white,

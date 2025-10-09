@@ -19,7 +19,7 @@ class LazaApp extends StatelessWidget {
         builder: (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
-            home: snapshot.data ? MainScreen() : LoginScreen(),
+            home: snapshot.data as bool ? LoginScreen() : MainScreen(),
           );
         },
       ),

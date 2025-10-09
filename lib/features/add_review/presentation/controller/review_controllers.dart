@@ -16,6 +16,7 @@ class AddReviewEntity {
 class AddReviewController {
   final commentController = TextEditingController();
   final nameController = TextEditingController();
+  final formKey = GlobalKey<FormState>();
 
   String? _productId;
   double rating = 2.5;
