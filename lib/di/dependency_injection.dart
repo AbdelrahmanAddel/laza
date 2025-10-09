@@ -44,7 +44,7 @@ _login(Dio dio) {
   getIt.registerLazySingleton<LoginRepository>(
     () => LoginRepositoryImpl(getIt()),
   );
-  getIt.registerLazySingleton<LoginCubit>(() => LoginCubit(getIt()));
+  getIt.registerSingleton<LoginCubit>( LoginCubit(getIt()));
 }
 
 _home(Dio dio) {

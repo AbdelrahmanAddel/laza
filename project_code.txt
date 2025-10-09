@@ -1,0 +1,5507 @@
+===== ./macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json =====
+{
+  "images" : [
+    {
+      "size" : "16x16",
+      "idiom" : "mac",
+      "filename" : "app_icon_16.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "16x16",
+      "idiom" : "mac",
+      "filename" : "app_icon_32.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "32x32",
+      "idiom" : "mac",
+      "filename" : "app_icon_32.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "32x32",
+      "idiom" : "mac",
+      "filename" : "app_icon_64.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "128x128",
+      "idiom" : "mac",
+      "filename" : "app_icon_128.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "128x128",
+      "idiom" : "mac",
+      "filename" : "app_icon_256.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "256x256",
+      "idiom" : "mac",
+      "filename" : "app_icon_256.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "256x256",
+      "idiom" : "mac",
+      "filename" : "app_icon_512.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "512x512",
+      "idiom" : "mac",
+      "filename" : "app_icon_512.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "512x512",
+      "idiom" : "mac",
+      "filename" : "app_icon_1024.png",
+      "scale" : "2x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
+===== ./test/widget_test.dart =====
+// This is a basic Flutter widget test.
+//
+// To perform an interaction with a widget in your test, use the WidgetTester
+// utility in the flutter_test package. For example, you can send tap and scroll
+// gestures. You can also use WidgetTester to find child widgets in the widget
+// tree, read text, and verify that the values of widget properties are correct.
+
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+import 'package:laza/main.dart';
+
+void main() {
+  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+    // Build our app and trigger a frame.
+    await tester.pumpWidget(const LazaApp());
+
+    // Verify that our counter starts at 0.
+    expect(find.text('0'), findsOneWidget);
+    expect(find.text('1'), findsNothing);
+
+    // Tap the '+' icon and trigger a frame.
+    await tester.tap(find.byIcon(Icons.add));
+    await tester.pump();
+
+    // Verify that our counter has incremented.
+    expect(find.text('0'), findsNothing);
+    expect(find.text('1'), findsOneWidget);
+  });
+}
+===== ./web/manifest.json =====
+{
+    "name": "laza",
+    "short_name": "laza",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#0175C2",
+    "theme_color": "#0175C2",
+    "description": "A new Flutter project.",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}
+===== ./ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json =====
+{
+  "images" : [
+    {
+      "filename" : "LaunchImage.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "LaunchImage@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "LaunchImage@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
+===== ./ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json =====
+{
+  "images" : [
+    {
+      "size" : "20x20",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-20x20@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "20x20",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-20x20@3x.png",
+      "scale" : "3x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-29x29@1x.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-29x29@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-29x29@3x.png",
+      "scale" : "3x"
+    },
+    {
+      "size" : "40x40",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-40x40@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "40x40",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-40x40@3x.png",
+      "scale" : "3x"
+    },
+    {
+      "size" : "60x60",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-60x60@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "60x60",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-60x60@3x.png",
+      "scale" : "3x"
+    },
+    {
+      "size" : "20x20",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-20x20@1x.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "20x20",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-20x20@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-29x29@1x.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-29x29@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "40x40",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-40x40@1x.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "40x40",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-40x40@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "76x76",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-76x76@1x.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "76x76",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-76x76@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "83.5x83.5",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-83.5x83.5@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "1024x1024",
+      "idiom" : "ios-marketing",
+      "filename" : "Icon-App-1024x1024@1x.png",
+      "scale" : "1x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
+===== ./ios/Runner/Assets.xcassets/LaunchBackground.imageset/Contents.json =====
+{
+  "images" : [
+    {
+      "filename" : "background.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
+===== ./ios/Pods/Local Podspecs/flutter_native_splash.podspec.json =====
+{
+  "name": "flutter_native_splash",
+  "version": "2.4.3",
+  "summary": "Flutter Native Splash",
+  "description": "Customize Flutter's default white native splash screen with background color and splash image. Supports dark mode, full screen, and more.",
+  "homepage": "https://github.com/jonbhanson/flutter_native_splash",
+  "license": {
+    "file": "../LICENSE"
+  },
+  "authors": {
+    "Jon Hanson": "jon@jonhanson.net"
+  },
+  "source": {
+    "path": "."
+  },
+  "source_files": "flutter_native_splash/Sources/flutter_native_splash/**/*.{h,m}",
+  "public_header_files": "flutter_native_splash/Sources/flutter_native_splash/include/**/*.h",
+  "dependencies": {
+    "Flutter": []
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "resource_bundles": {
+    "flutter_native_splash_privacy": [
+      "flutter_native_splash/Sources/flutter_native_splash/PrivacyInfo.xcprivacy"
+    ]
+  },
+  "pod_target_xcconfig": {
+    "DEFINES_MODULE": "YES",
+    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "i386"
+  }
+}
+===== ./ios/Pods/Local Podspecs/path_provider_foundation.podspec.json =====
+{
+  "name": "path_provider_foundation",
+  "version": "0.0.1",
+  "summary": "An iOS and macOS implementation of the path_provider plugin.",
+  "description": "An iOS and macOS implementation of the Flutter plugin for getting commonly used locations on the filesystem.",
+  "homepage": "https://github.com/flutter/packages/tree/main/packages/path_provider/path_provider_foundation",
+  "license": {
+    "type": "BSD",
+    "file": "../LICENSE"
+  },
+  "authors": {
+    "Flutter Dev Team": "flutter-dev@googlegroups.com"
+  },
+  "source": {
+    "http": "https://github.com/flutter/packages/tree/main/packages/path_provider/path_provider_foundation"
+  },
+  "source_files": "path_provider_foundation/Sources/path_provider_foundation/**/*.swift",
+  "ios": {
+    "dependencies": {
+      "Flutter": []
+    },
+    "xcconfig": {
+      "LIBRARY_SEARCH_PATHS": "$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)/ $(SDKROOT)/usr/lib/swift",
+      "LD_RUNPATH_SEARCH_PATHS": "/usr/lib/swift"
+    }
+  },
+  "osx": {
+    "dependencies": {
+      "FlutterMacOS": []
+    }
+  },
+  "platforms": {
+    "ios": "12.0",
+    "osx": "10.14"
+  },
+  "swift_versions": "5.0",
+  "resource_bundles": {
+    "path_provider_foundation_privacy": [
+      "path_provider_foundation/Sources/path_provider_foundation/Resources/PrivacyInfo.xcprivacy"
+    ]
+  },
+  "swift_version": "5.0"
+}
+===== ./ios/Pods/Local Podspecs/shared_preferences_foundation.podspec.json =====
+{
+  "name": "shared_preferences_foundation",
+  "version": "0.0.1",
+  "summary": "iOS and macOS implementation of the shared_preferences plugin.",
+  "description": "Wraps NSUserDefaults, providing a persistent store for simple key-value pairs.",
+  "homepage": "https://github.com/flutter/packages/tree/main/packages/shared_preferences/shared_preferences_foundation",
+  "license": {
+    "type": "BSD",
+    "file": "../LICENSE"
+  },
+  "authors": {
+    "Flutter Team": "flutter-dev@googlegroups.com"
+  },
+  "source": {
+    "http": "https://github.com/flutter/packages/tree/main/packages/shared_preferences/shared_preferences_foundation"
+  },
+  "source_files": "shared_preferences_foundation/Sources/shared_preferences_foundation/**/*.swift",
+  "ios": {
+    "dependencies": {
+      "Flutter": []
+    }
+  },
+  "osx": {
+    "dependencies": {
+      "FlutterMacOS": []
+    }
+  },
+  "platforms": {
+    "ios": "12.0",
+    "osx": "10.14"
+  },
+  "pod_target_xcconfig": {
+    "DEFINES_MODULE": "YES"
+  },
+  "xcconfig": {
+    "LIBRARY_SEARCH_PATHS": "$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)/ $(SDKROOT)/usr/lib/swift",
+    "LD_RUNPATH_SEARCH_PATHS": "/usr/lib/swift"
+  },
+  "swift_versions": "5.0",
+  "resource_bundles": {
+    "shared_preferences_foundation_privacy": [
+      "shared_preferences_foundation/Sources/shared_preferences_foundation/Resources/PrivacyInfo.xcprivacy"
+    ]
+  },
+  "swift_version": "5.0"
+}
+===== ./ios/Pods/Local Podspecs/Flutter.podspec.json =====
+{
+  "name": "Flutter",
+  "version": "1.0.0",
+  "summary": "A UI toolkit for beautiful and fast apps.",
+  "homepage": "https://flutter.dev",
+  "license": {
+    "type": "BSD"
+  },
+  "authors": {
+    "Flutter Dev Team": "flutter-dev@googlegroups.com"
+  },
+  "source": {
+    "git": "https://github.com/flutter/engine",
+    "tag": "1.0.0"
+  },
+  "platforms": {
+    "ios": "12.0"
+  },
+  "vendored_frameworks": "path/to/nothing"
+}
+===== ./ios/Pods/Local Podspecs/flutter_secure_storage.podspec.json =====
+{
+  "name": "flutter_secure_storage",
+  "version": "6.0.0",
+  "summary": "A Flutter plugin to store data in secure storage.",
+  "description": "A Flutter plugin to store data in secure storage.",
+  "homepage": "http://example.com",
+  "license": {
+    "file": "../LICENSE"
+  },
+  "authors": {
+    "German Saprykin": "saprykin.h@gmail.com"
+  },
+  "source": {
+    "path": "."
+  },
+  "source_files": "Classes/**/*",
+  "public_header_files": "Classes/**/*.h",
+  "dependencies": {
+    "Flutter": []
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "pod_target_xcconfig": {
+    "DEFINES_MODULE": "YES",
+    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "i386"
+  },
+  "swift_versions": "5.0",
+  "resource_bundles": {
+    "flutter_secure_storage": [
+      "Resources/PrivacyInfo.xcprivacy"
+    ]
+  },
+  "swift_version": "5.0"
+}
+===== ./pubspec.yaml =====
+name: laza
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.1
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.8
+  dio: ^5.9.0
+  retrofit: ^4.7.3
+  dartz: ^0.10.1
+  bloc: ^9.0.1
+  flutter_svg: ^2.2.1
+  flutter_native_splash: ^2.4.6
+  flutter_screenutil: ^5.9.3
+  flutter_bloc: ^9.1.1
+  get_it: ^8.2.0
+  json_annotation: ^4.9.0
+  pretty_dio_logger: ^1.4.0
+  readmore: ^3.0.0
+  shared_preferences: ^2.5.3
+  flutter_secure_storage: ^9.2.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^5.0.0
+  json_serializable: ^6.11.1
+  build_runner: ^2.9.0
+  retrofit_generator: ^10.0.6
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/images/png/
+    - assets/images/svg/
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/to/resolution-aware-images
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/to/asset-from-package
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+fonts:
+  - family: Inter
+    fonts:
+      - asset: assets/fonts/Inter_24pt-Medium.ttf
+        weight: 500
+      - asset: assets/fonts/Inter_24pt-SemiBold.ttf
+        weight: 600
+      - asset: assets/fonts/Inter_28pt-ExtraBold.ttf
+        weight: 800
+      - asset: assets/fonts/Inter_28pt-Regular.ttf
+        weight: 400
+        
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/to/font-from-package
+flutter_assets:
+  assets_path:
+    - assets/images/png/
+    - assets/images/svg/
+  output_path: lib/core/constants/
+  filename: assets.dart
+  field_prefix:
+  classname: Assets
+  ignore_comments: true
+===== ./android/app/src/profile/AndroidManifest.xml =====
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- The INTERNET permission is required for development. Specifically,
+         the Flutter tool needs it to communicate with the running application
+         to allow setting breakpoints, to provide hot reload, etc.
+    -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+</manifest>
+===== ./android/app/src/main/res/values-night-v31/styles.xml =====
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme applied to the Android Window while the process is starting when the OS's Dark Mode setting is on -->
+    <style name="LaunchTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+    <!-- Theme applied to the Android Window as soon as the process has started.
+         This theme determines the color of the Android Window while your
+         Flutter UI initializes, as well as behind your Flutter UI while its
+         running.
+         
+         This Theme is only used starting with V2 of Flutter's Android embedding. -->
+    <style name="NormalTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">?android:colorBackground</item>
+    </style>
+</resources>
+===== ./android/app/src/main/res/drawable/launch_background.xml =====
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <bitmap android:gravity="fill" android:src="@drawable/background"/>
+    </item>
+    <item>
+        <bitmap android:gravity="center" android:src="@drawable/splash"/>
+    </item>
+</layer-list>
+===== ./android/app/src/main/res/values-night/styles.xml =====
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme applied to the Android Window while the process is starting when the OS's Dark Mode setting is on -->
+    <style name="LaunchTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <!-- Show a splash screen on the activity. Automatically removed when
+             the Flutter engine draws its first frame -->
+        <item name="android:windowBackground">@drawable/launch_background</item>
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+    <!-- Theme applied to the Android Window as soon as the process has started.
+         This theme determines the color of the Android Window while your
+         Flutter UI initializes, as well as behind your Flutter UI while its
+         running.
+
+         This Theme is only used starting with V2 of Flutter's Android embedding. -->
+    <style name="NormalTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">?android:colorBackground</item>
+    </style>
+</resources>
+===== ./android/app/src/main/res/values/styles.xml =====
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme applied to the Android Window while the process is starting when the OS's Dark Mode setting is off -->
+    <style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <!-- Show a splash screen on the activity. Automatically removed when
+             the Flutter engine draws its first frame -->
+        <item name="android:windowBackground">@drawable/launch_background</item>
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+    <!-- Theme applied to the Android Window as soon as the process has started.
+         This theme determines the color of the Android Window while your
+         Flutter UI initializes, as well as behind your Flutter UI while its
+         running.
+
+         This Theme is only used starting with V2 of Flutter's Android embedding. -->
+    <style name="NormalTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">?android:colorBackground</item>
+    </style>
+</resources>
+===== ./android/app/src/main/res/drawable-v21/launch_background.xml =====
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <bitmap android:gravity="fill" android:src="@drawable/background"/>
+    </item>
+    <item>
+        <bitmap android:gravity="center" android:src="@drawable/splash"/>
+    </item>
+</layer-list>
+===== ./android/app/src/main/res/values-v31/styles.xml =====
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme applied to the Android Window while the process is starting when the OS's Dark Mode setting is off -->
+    <style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+    <!-- Theme applied to the Android Window as soon as the process has started.
+         This theme determines the color of the Android Window while your
+         Flutter UI initializes, as well as behind your Flutter UI while its
+         running.
+         
+         This Theme is only used starting with V2 of Flutter's Android embedding. -->
+    <style name="NormalTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">?android:colorBackground</item>
+    </style>
+</resources>
+===== ./android/app/src/main/AndroidManifest.xml =====
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application
+        android:label="laza"
+        android:name="${applicationName}"
+        android:icon="@mipmap/ic_launcher">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:taskAffinity=""
+            android:theme="@style/LaunchTheme"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize">
+            <!-- Specifies an Android theme to apply to this Activity as soon as
+                 the Android process has started. This theme is visible to the user
+                 while the Flutter UI initializes. After that, this theme continues
+                 to determine the Window background behind the Flutter UI. -->
+            <meta-data
+              android:name="io.flutter.embedding.android.NormalTheme"
+              android:resource="@style/NormalTheme"
+              />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <!-- Don't delete the meta-data below.
+             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2" />
+    </application>
+    <!-- Required to query activities that can process text, see:
+         https://developer.android.com/training/package-visibility and
+         https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
+
+         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin. -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.PROCESS_TEXT"/>
+            <data android:mimeType="text/plain"/>
+        </intent>
+    </queries>
+</manifest>
+===== ./android/app/src/debug/AndroidManifest.xml =====
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- The INTERNET permission is required for development. Specifically,
+         the Flutter tool needs it to communicate with the running application
+         to allow setting breakpoints, to provide hot reload, etc.
+    -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+</manifest>
+===== ./lib/di/dependency_injection.dart =====
+import 'package:dio/dio.dart';
+import 'package:get_it/get_it.dart';
+import 'package:laza/core/helper/shared_pref.dart';
+import 'package:laza/features/add_review/data/datasources/add_review_api_service.dart';
+import 'package:laza/features/add_review/data/repositories/add_review_repository_impl.dart';
+import 'package:laza/features/add_review/domain/repositories/add_review_repository.dart';
+import 'package:laza/features/add_review/presentation/cubit/add_review_cubit.dart';
+import 'package:laza/features/category/data/datasources/category_api_service.dart';
+import 'package:laza/features/category/data/repositories/category_repository_impl.dart';
+import 'package:laza/features/category/domain/repositories/category_repository.dart';
+import 'package:laza/features/category/presentation/cubit/category_cubit.dart';
+import 'package:laza/features/home/data/datasources/home_api_service.dart';
+import 'package:laza/features/home/data/repositories/home_repoistory_impl.dart';
+import 'package:laza/features/home/domain/repositories/home_repository.dart';
+import 'package:laza/features/home/presentation/cubit/home_cubit.dart';
+import 'package:laza/features/login/data/datasources/login_api_service.dart';
+import 'package:laza/features/login/data/repositories/login_repository_impl.dart';
+import 'package:laza/features/login/domain/repositories/login_repository.dart';
+import 'package:laza/features/login/presentation/cubit/login_cubit.dart';
+import 'package:laza/features/reviews/data/datasources/review_api_service.dart';
+import 'package:laza/features/reviews/data/repositories/review_repository_impl.dart';
+import 'package:laza/features/reviews/domain/repositories/review_repository.dart';
+import 'package:laza/features/reviews/presentation/cubit/review_cubit.dart';
+import 'package:laza/features/cart/data/datasources/cart_api_service.dart';
+import 'package:laza/features/cart/data/repositories/cart_repository_impl.dart';
+import 'package:laza/features/cart/domain/repositories/cart_repository.dart';
+import 'package:laza/features/cart/presentation/cubit/cart_cubit.dart';
+import 'package:pretty_dio_logger/pretty_dio_logger.dart';
+
+final getIt = GetIt.instance;
+
+Future<void> setup() async {
+  Dio dio = await DioFactory.getDio();
+  _login(dio);
+  _home(dio);
+  _category(dio);
+  _reviews(dio);
+  _addReview(dio);
+  _cart(dio);
+}
+
+_login(Dio dio) {
+  getIt.registerLazySingleton<LoginApiService>(() => LoginApiService(dio));
+  getIt.registerLazySingleton<LoginRepository>(
+    () => LoginRepositoryImpl(getIt()),
+  );
+  getIt.registerLazySingleton<LoginCubit>(() => LoginCubit(getIt()));
+}
+
+_home(Dio dio) {
+  getIt.registerLazySingleton<HomeApiService>(() => HomeApiService(dio));
+  getIt.registerLazySingleton<HomeRepository>(
+    () => HomeRepositoryImpl(apiService: getIt()),
+  );
+  getIt.registerLazySingleton<HomeCubit>(() => HomeCubit(getIt()));
+}
+
+_category(Dio dio) {
+  getIt.registerLazySingleton<CategoryApiService>(
+    () => CategoryApiService(dio),
+  );
+  getIt.registerLazySingleton<CategoryRepository>(
+    () => CategoryRepositoryImpl(apiService: getIt()),
+  );
+  getIt.registerLazySingleton<CategoryCubit>(() => CategoryCubit(getIt()));
+}
+
+_reviews(Dio dio) {
+  getIt.registerLazySingleton<ReviewApiService>(() => ReviewApiService(dio));
+  getIt.registerLazySingleton<ReviewRepository>(
+    () => ReviewRepositoryImpl(apiService: getIt()),
+  );
+  getIt.registerFactory<ReviewCubit>(() => ReviewCubit(getIt()));
+}
+
+_addReview(Dio dio) {
+  getIt.registerLazySingleton<AddReviewApiService>(
+    () => AddReviewApiService(dio),
+  );
+  getIt.registerLazySingleton<AddReviewRepository>(
+    () => AddReviewRepositoryImpl(apiService: getIt()),
+  );
+  getIt.registerFactory<AddReviewCubit>(
+    () => AddReviewCubit(repository: getIt()),
+  );
+}
+
+_cart(Dio dio) {
+  getIt.registerLazySingleton<CartApiService>(() => CartApiService(dio));
+  getIt.registerLazySingleton<CartRepository>(
+    () => CartRepositoryImpl(apiService: getIt()),
+  );
+  getIt.registerFactory<CartCubit>(() => CartCubit(cartRepository: getIt()));
+}
+
+class DioFactory {
+  DioFactory._();
+  static Dio? _dioInstance;
+  static Future<Dio> getDio() async {
+    const time = Duration(seconds: 30);
+    if (_dioInstance == null) {
+      _dioInstance = Dio();
+      _dioInstance!.options.headers['Authorization'] =
+          'Bearer ${await SharedPrefHelper.getSecuredString('token')}';
+
+      prettyLogger();
+      _dioInstance!
+        ..options.connectTimeout = time
+        ..options.receiveTimeout = time;
+      return _dioInstance!;
+    } else {
+      return _dioInstance!;
+    }
+  }
+
+  static void prettyLogger() {
+    _dioInstance!.interceptors.add(
+      PrettyDioLogger(requestHeader: true, requestBody: true),
+    );
+  }
+}
+===== ./lib/core/constants/assets.dart =====
+// ignore_for_file: prefer_single_quotes
+class Assets {
+  Assets._();
+  
+  static const String imagesPngSplashScreen = "assets/images/png/splashScreen.png";
+
+  static const String imagesSvgBackIcon = "assets/images/svg/backIcon.svg";
+
+  static const String imagesSvgCart = "assets/images/svg/cart.svg";
+
+  static const String imagesSvgCartIcon = "assets/images/svg/cartIcon.svg";
+
+  static const String imagesSvgDelivery = "assets/images/svg/delivery.svg";
+
+  static const String imagesSvgHome = "assets/images/svg/home.svg";
+
+  static const String imagesSvgMenuIcon = "assets/images/svg/menuIcon.svg";
+
+  static const String imagesSvgSearchIcon = "assets/images/svg/searchIcon.svg";
+
+  static const String imagesSvgVisa = "assets/images/svg/visa.svg";
+
+  static const String imagesSvgWallet = "assets/images/svg/wallet.svg";
+
+  static const String imagesSvgWishlist = "assets/images/svg/wishlist.svg";
+}
+
+===== ./lib/core/constants/app_colors.dart =====
+import 'dart:ui';
+
+class AppColors {
+  static const Color primaryColor = Color(0xFF9775FA);
+  static const Color secondaryColor = Color(0xFFFF7043);
+  static const Color textColor = Color(0xFF1D1E20);
+  static const Color grey= Color(0xFF8F959E);
+  static const Color lightGrey= Color(0xFFF5F6FA);
+  static const Color secondaryTextColor = Color(0xFF1B262C);
+  static const Color tertiaryTextColor = Color(0xFF222E34);
+  static const Color quaternaryTextColor = Color(0xFF29363D);
+  static const Color quinaryTextColor = Color(0xFFF5F8FB);
+}
+// #F5F6FA===== ./lib/core/common/image_resources.dart =====
+class ImageResources {
+	//static final String loginBackground = "assets/images/bg.png";
+}
+===== ./lib/core/common/app_text_styles.dart =====
+import 'package:flutter/material.dart';
+import 'package:laza/core/constants/app_colors.dart';
+
+class AppTextStyle {
+  static const TextStyle we500Si11ColPrimary = TextStyle(
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w500,
+    fontSize: 11,
+    color: AppColors.primaryColor,
+  );
+  static const TextStyle we600Si28ColText = TextStyle(
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w600,
+    fontSize: 28,
+    color: AppColors.textColor,
+  );
+  static const TextStyle we500Si17ColText = TextStyle(
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w500,
+    fontSize: 17,
+    color: AppColors.textColor,
+  );
+  static const TextStyle we400Si15ColGrey = TextStyle(
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w400,
+    fontSize: 15,
+    color: AppColors.grey,
+  );
+  static const TextStyle we500Si13CollightGrey = TextStyle(
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w500,
+    fontSize: 13,
+    color: AppColors.lightGrey,
+  );
+}
+===== ./lib/core/common/models/error_model.dart =====
+class ErrorModel {
+  final String? message;
+  final int? statusCode;
+  final Map<String, List<String>>? errors;
+  final String? type;
+  final String? title;
+  final String? detail;
+  final String? instance;
+  factory ErrorModel.fromJson(Map<String, dynamic> json) {
+    if (json.containsKey('errors')) {
+      final errors = (json['errors'] as Map<String, dynamic>).map(
+        (key, value) => MapEntry(
+          key,
+          (value as List).map((error) => error.toString()).toList(),
+        ),
+      );
+
+      return ErrorModel(
+        message: json['message'],
+        statusCode: json['statusCode'],
+        errors: errors,
+      );
+    }
+    return ErrorModel(
+      type: json['type'],
+      title: json['title'],
+      detail: json['detail'],
+      instance: json['instance'],
+    );
+  }
+  String getReadableMessage() {
+    if (errors != null && errors!.isNotEmpty) {
+      final allErrors = errors!.entries
+          .map((e) => '${e.key}: ${e.value.join(", ")}')
+          .join(" | ");
+      return allErrors;
+    }
+    return message ?? detail ?? title ?? "Unknown error occurred";
+  }
+
+  ErrorModel({
+    this.message,
+    this.statusCode,
+    this.errors,
+    this.type,
+    this.title,
+    this.detail,
+    this.instance,
+  });
+}
+===== ./lib/core/common/app_routes.dart =====
+
+class AppRoutes {
+	static final String root = "/";
+}
+===== ./lib/core/common/app_colors.dart =====
+import 'package:flutter/material.dart';
+
+class AppColors {
+	static final Color baseColor = Color(0xFF212735);
+}
+===== ./lib/core/common/app_themes.dart =====
+class AppThemes {
+	//static final ThemeData appTheme = ThemeData()
+}
+===== ./lib/core/common/api/api_service.dart =====
+// import 'package:dio/dio.dart';
+// import 'package:laza/api/api_constant.dart';
+// import 'package:laza/features/home/data/models/products_model.dart';
+// import 'package:retrofit/retrofit.dart';
+
+// part 'home_api_service.g.dart';
+
+// @RestApi(baseUrl: ApiConstant.baseUrl)
+// abstract class ApiService {
+//   factory ApiService(Dio dio) = _ApiService;
+
+//   @GET(ApiConstant.productEndPoint)
+//   Future<CategoriesResponce> getCategories();
+// }
+
+===== ./lib/core/common/widgets/product_item.dart =====
+import 'package:flutter/material.dart';
+import 'package:laza/core/common/app_text_styles.dart';
+import 'package:laza/core/constants/app_colors.dart';
+import 'package:laza/core/helper/spacing.dart';
+import 'package:laza/features/product_details/presentation/screen/product_details_screen.dart';
+import 'package:laza/features/home/domain/entities/product_entity.dart';
+
+class ProductItem extends StatelessWidget {
+  const ProductItem({super.key, required this.product});
+
+  final Product product;
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (builder) => ProductDetailsScreen(product: product),
+          ),
+        );
+      },
+
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Expanded(
+            child: Hero(
+              tag: product.id ?? '',
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  image: DecorationImage(
+                    fit: BoxFit.fill,
+                    image: NetworkImage(product.coverPictureUrl ?? ''),
+                  ),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.only(right: 5.0, top: 5),
+                  child: Align(
+                    alignment: Alignment.topRight,
+                    child: Icon(Icons.favorite, color: AppColors.lightGrey),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          verticalSpace(5),
+          Text(
+            product.name ?? '',
+            style: AppTextStyle.we500Si17ColText,
+            overflow: TextOverflow.ellipsis,
+          ),
+          verticalSpace(5),
+          Text(
+            product.price.toString(),
+            style: AppTextStyle.we500Si17ColText.copyWith(fontSize: 15),
+          ),
+        ],
+      ),
+    );
+  }
+}
+===== ./lib/core/common/widgets/read_more_widget.dart =====
+import 'package:flutter/material.dart';
+import 'package:laza/core/common/app_text_styles.dart';
+import 'package:readmore/readmore.dart';
+
+class ReadMoreWidget extends StatelessWidget {
+  const ReadMoreWidget({super.key, required this.text});
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return ReadMoreText(
+      style: AppTextStyle.we400Si15ColGrey,
+      text,
+      trimMode: TrimMode.Line,
+      trimLines: 2,
+      colorClickableText: Colors.black,
+      trimCollapsedText: 'Show more',
+      trimExpandedText: 'Show less',
+      moreStyle: TextStyle(
+        fontSize: 14,
+        fontWeight: FontWeight.bold,
+        color: Colors.black,
+      ),
+    );
+  }
+}
+===== ./lib/core/common/widgets/review_item.dart =====
+import 'package:flutter/material.dart';
+import 'package:laza/core/common/widgets/read_more_widget.dart';
+import 'package:laza/core/helper/spacing.dart';
+import 'package:laza/features/reviews/domain/entities/review_entity.dart';
+
+class ReviewItem extends StatelessWidget {
+  const ReviewItem({super.key, this.review});
+  final Review? review;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          children: [
+            CircleAvatar(
+              backgroundImage: NetworkImage(review?.userPicture ?? ''),
+              radius: 25,
+            ),
+            horizontalSpace(10),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(review?.userName ?? ''),
+                Text(review?.createdAt?.substring(0, 10) ?? ''),
+              ],
+            ),
+            const Spacer(),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('${review?.rating?.floor()} Rating'),
+                Row(
+                  children: [
+                    ...List.generate(
+                      review?.rating?.floor() ?? 0,
+                      (index) =>
+                          const Icon(Icons.star, color: Colors.amber, size: 16),
+                    ),
+                    if ((review?.rating ?? 0) -
+                            (review?.rating?.floor() ?? 0) >=
+                        0.5)
+                      const Icon(
+                        Icons.star_half,
+                        color: Colors.amber,
+                        size: 16,
+                      ),
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
+        verticalSpace(10),
+        ReadMoreWidget(text: review?.comment ?? ''),
+      ],
+    );
+  }
+}
+===== ./lib/core/common/widgets/custom_material_button.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:laza/core/common/app_text_styles.dart';
+import 'package:laza/core/constants/app_colors.dart';
+
+class CustomMaterialButton extends StatelessWidget {
+  const CustomMaterialButton({super.key, required this.text, this.onPressed});
+  final String text;
+  final void Function()? onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialButton(
+      height: 75.h,
+      minWidth: double.infinity,
+      color: AppColors.primaryColor,
+      onPressed: onPressed ?? () {},
+      child: Text(
+        text,
+        style: AppTextStyle.we500Si17ColText.copyWith(
+          color: AppColors.lightGrey,
+        ),
+      ),
+    );
+  }
+}
+===== ./lib/core/errors/server_exception.dart =====
+import 'package:laza/core/common/models/error_model.dart';
+
+class ServerException implements Exception {
+  final ErrorModel errorModel;
+
+  ServerException({required this.errorModel});
+}
+===== ./lib/core/errors/handle_exception.dart =====
+import 'package:dio/dio.dart';
+import 'package:laza/core/common/models/error_model.dart';
+import 'package:laza/core/errors/server_exception.dart';
+
+class HandleException {
+  static void handle(DioException error) {
+    final errorModel = ErrorModel.fromJson(error.response?.data);
+    switch (error.type) {
+      case DioExceptionType.connectionTimeout:
+        throw ServerException(errorModel: errorModel);
+      case DioExceptionType.sendTimeout:
+        throw ServerException(errorModel: errorModel);
+      case DioExceptionType.receiveTimeout:
+        throw ServerException(errorModel: errorModel);
+      case DioExceptionType.badCertificate:
+        throw ServerException(errorModel: errorModel);
+      case DioExceptionType.badResponse:
+        _handleBadRequest(errorModel, error.response?.statusCode ?? 0);
+      case DioExceptionType.cancel:
+        throw ServerException(errorModel: errorModel);
+      case DioExceptionType.connectionError:
+        throw ServerException(errorModel: errorModel);
+      case DioExceptionType.unknown:
+        throw ServerException(errorModel: errorModel);
+    }
+  }
+
+  static _handleBadRequest(ErrorModel errorModel, int statusCode) {
+    switch (statusCode) {
+      case 400:
+        throw ServerException(errorModel: errorModel);
+      case 401:
+        throw ServerException(errorModel: errorModel);
+      case 403:
+        throw ServerException(errorModel: errorModel);
+      case 404:
+        throw ServerException(errorModel: errorModel);
+      case 500:
+        throw ServerException(errorModel: errorModel);
+      case 502:
+        throw ServerException(errorModel: errorModel);
+      case 503:
+        throw ServerException(errorModel: errorModel);
+      case 504:
+        throw ServerException(errorModel: errorModel);
+      default:
+        throw ServerException(errorModel: errorModel);
+    }
+  }
+}
+===== ./lib/core/errors/exceptions.dart =====
+class ServerException implements Exception {
+  final String message;
+  final int statusCode;
+
+  ServerException({
+    required this.message,
+    required this.statusCode,
+  });
+
+}
+
+===== ./lib/core/helper/shared_pref.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+class SharedPrefHelper {
+  SharedPrefHelper._(); // Prevent instantiation
+
+  static const _secureStorage = FlutterSecureStorage();
+  static late SharedPreferences _prefs;
+
+  // ------------------- Initialization -------------------
+  static Future<void> init() async {
+    _prefs = await SharedPreferences.getInstance();
+    debugPrint('SharedPrefHelper: SharedPreferences initialized');
+  }
+
+  // ------------------- SharedPreferences Methods -------------------
+  static Future<void> setData(String key, dynamic value) async {
+    debugPrint('SharedPrefHelper: setData → key: $key, value: $value');
+    if (value is String) {
+      await _prefs.setString(key, value);
+    } else if (value is int) {
+      await _prefs.setInt(key, value);
+    } else if (value is bool) {
+      await _prefs.setBool(key, value);
+    } else if (value is double) {
+      await _prefs.setDouble(key, value);
+    } else {
+      throw UnsupportedError('Type ${value.runtimeType} is not supported.');
+    }
+  }
+
+  static String getString(String key, {String defaultValue = ''}) {
+    debugPrint('SharedPrefHelper: getString → key: $key');
+    return _prefs.getString(key) ?? defaultValue;
+  }
+
+  static int getInt(String key, {int defaultValue = 0}) {
+    debugPrint('SharedPrefHelper: getInt → key: $key');
+    return _prefs.getInt(key) ?? defaultValue;
+  }
+
+  static bool getBool(String key, {bool defaultValue = false}) {
+    debugPrint('SharedPrefHelper: getBool → key: $key');
+    return _prefs.getBool(key) ?? defaultValue;
+  }
+
+  static double getDouble(String key, {double defaultValue = 0.0}) {
+    debugPrint('SharedPrefHelper: getDouble → key: $key');
+    return _prefs.getDouble(key) ?? defaultValue;
+  }
+
+  static Future<void> removeData(String key) async {
+    debugPrint('SharedPrefHelper: removeData → key: $key');
+    await _prefs.remove(key);
+  }
+
+  static Future<void> clearAllData() async {
+    debugPrint('SharedPrefHelper: clearAllData');
+    await _prefs.clear();
+  }
+
+  // ------------------- FlutterSecureStorage Methods -------------------
+
+  static Future<void> setSecuredString(String key, String value) async {
+    debugPrint('SecureStorage: set → key: $key, value: $value');
+    await _secureStorage.write(key: key, value: value);
+  }
+
+  static Future<String> getSecuredString(String key, {String defaultValue = ''}) async {
+    debugPrint('SecureStorage: get → key: $key');
+    return await _secureStorage.read(key: key) ?? defaultValue;
+  }
+
+  static Future<void> clearAllSecuredData() async {
+    debugPrint('SecureStorage: clearAll');
+    await _secureStorage.deleteAll();
+  }
+}===== ./lib/core/helper/spacing.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+SizedBox verticalSpace(double height) => SizedBox(height: height.h);
+SizedBox horizontalSpace(double width) => SizedBox(width: width.w);
+===== ./lib/core/helper/navigation.dart =====
+import 'package:flutter/material.dart';
+
+class Navigation {
+  static push(Widget screen, BuildContext context) {
+    Navigator.push(context, MaterialPageRoute(builder: (builder) => screen));
+  }
+
+  static pop(BuildContext context) {
+    Navigator.pop(context);
+  }
+}
+===== ./lib/features/home/data/datasources/home_api_service.dart =====
+import 'package:dio/dio.dart';
+import 'package:laza/api/api_constant.dart';
+import 'package:laza/features/home/data/models/products_model.dart';
+import 'package:retrofit/retrofit.dart';
+
+part 'home_api_service.g.dart';
+
+@RestApi(baseUrl: ApiConstant.baseUrl)
+abstract class HomeApiService {
+  factory HomeApiService(Dio dio) = _HomeApiService;
+
+  @GET(ApiConstant.productEndPoint)
+  Future<ProductResponse> getProducts();
+}
+===== ./lib/features/home/data/datasources/home_api_service.g.dart =====
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'home_api_service.dart';
+
+// dart format off
+
+// **************************************************************************
+// RetrofitGenerator
+// **************************************************************************
+
+// ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers,unused_element,unnecessary_string_interpolations,unused_element_parameter
+
+class _HomeApiService implements HomeApiService {
+  _HomeApiService(this._dio, {this.baseUrl, this.errorLogger}) {
+    baseUrl ??= 'https://accessories-eshop.runasp.net/';
+  }
+
+  final Dio _dio;
+
+  String? baseUrl;
+
+  final ParseErrorLogger? errorLogger;
+
+  @override
+  Future<ProductResponse> getProducts() async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    const Map<String, dynamic>? _data = null;
+    final _options = _setStreamType<ProductResponse>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            'api/products',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late ProductResponse _value;
+    try {
+      _value = ProductResponse.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
+  }
+
+  RequestOptions _setStreamType<T>(RequestOptions requestOptions) {
+    if (T != dynamic &&
+        !(requestOptions.responseType == ResponseType.bytes ||
+            requestOptions.responseType == ResponseType.stream)) {
+      if (T == String) {
+        requestOptions.responseType = ResponseType.plain;
+      } else {
+        requestOptions.responseType = ResponseType.json;
+      }
+    }
+    return requestOptions;
+  }
+
+  String _combineBaseUrls(String dioBaseUrl, String? baseUrl) {
+    if (baseUrl == null || baseUrl.trim().isEmpty) {
+      return dioBaseUrl;
+    }
+
+    final url = Uri.parse(baseUrl);
+
+    if (url.isAbsolute) {
+      return url.toString();
+    }
+
+    return Uri.parse(dioBaseUrl).resolveUri(url).toString();
+  }
+}
+
+// dart format on
+===== ./lib/features/home/data/mapper/product_mapper.dart =====
+import 'package:laza/features/home/data/models/products_model.dart';
+import 'package:laza/features/home/domain/entities/product_entity.dart';
+
+class ProductMapper {
+  static List<Product>? toEntity(ProductResponse model) {
+    return model.items
+        ?.map(
+          (item) => Product(
+            id: item.id,
+            productCode: item.productCode,
+            name: item.name,
+            description: item.description,
+            arabicName: item.arabicName,
+            arabicDescription: item.arabicDescription,
+            coverPictureUrl: item.coverPictureUrl,
+            productPictures: item.productPictures,
+            price: item.price,
+            stock: item.stock,
+            weight: item.weight,
+            color: item.color,
+            rating: item.rating,
+            reviewsCount: item.reviewsCount,
+            discountPercentage: item.discountPercentage,
+            sellerId: item.sellerId,
+            categories: item.categories,
+          ),
+        )
+        .toList();
+  }
+}
+===== ./lib/features/home/data/repositories/home_repoistory_impl.dart =====
+import 'package:dio/dio.dart';
+import 'package:laza/core/errors/handle_exception.dart';
+import 'package:laza/features/home/data/datasources/home_api_service.dart';
+import 'package:laza/features/home/data/mapper/product_mapper.dart';
+import 'package:laza/features/home/domain/entities/product_entity.dart';
+import 'package:laza/features/home/domain/repositories/home_repository.dart';
+
+class HomeRepositoryImpl implements HomeRepository {
+  final HomeApiService apiService;
+
+  HomeRepositoryImpl({required this.apiService});
+  @override
+  Future<List<Product>>? getProducts() async {
+    try {
+      final response = await apiService.getProducts();
+      return ProductMapper.toEntity(response) ?? [];
+    } on DioException catch (error) {
+      HandleException.handle(error);
+      rethrow;
+    }
+  }
+}
+===== ./lib/features/home/data/models/products_model.g.dart =====
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'products_model.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+ProductResponse _$ProductResponseFromJson(Map<String, dynamic> json) =>
+    ProductResponse(
+      items: (json['items'] as List<dynamic>?)
+          ?.map((e) => Item.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      page: (json['page'] as num?)?.toInt(),
+      pageSize: (json['pageSize'] as num?)?.toInt(),
+      totalCount: (json['totalCount'] as num?)?.toInt(),
+      hasNextPage: json['hasNextPage'] as bool?,
+      hasPreviousPage: json['hasPreviousPage'] as bool?,
+    );
+
+Map<String, dynamic> _$ProductResponseToJson(ProductResponse instance) =>
+    <String, dynamic>{
+      'items': instance.items,
+      'page': instance.page,
+      'pageSize': instance.pageSize,
+      'totalCount': instance.totalCount,
+      'hasNextPage': instance.hasNextPage,
+      'hasPreviousPage': instance.hasPreviousPage,
+    };
+
+Item _$ItemFromJson(Map<String, dynamic> json) => Item(
+  id: json['id'] as String?,
+  productCode: json['productCode'] as String?,
+  name: json['name'] as String?,
+  description: json['description'] as String?,
+  arabicName: json['arabicName'] as String?,
+  arabicDescription: json['arabicDescription'] as String?,
+  coverPictureUrl: json['coverPictureUrl'] as String?,
+  productPictures: (json['productPictures'] as List<dynamic>?)
+      ?.map((e) => e as String)
+      .toList(),
+  price: (json['price'] as num?)?.toDouble(),
+  stock: (json['stock'] as num?)?.toInt(),
+  weight: (json['weight'] as num?)?.toDouble(),
+  color: json['color'] as String?,
+  rating: (json['rating'] as num?)?.toDouble(),
+  reviewsCount: (json['reviewsCount'] as num?)?.toInt(),
+  discountPercentage: (json['discountPercentage'] as num?)?.toDouble(),
+  sellerId: json['sellerId'] as String?,
+  categories: (json['categories'] as List<dynamic>?)
+      ?.map((e) => e as String)
+      .toList(),
+);
+
+Map<String, dynamic> _$ItemToJson(Item instance) => <String, dynamic>{
+  'id': instance.id,
+  'productCode': instance.productCode,
+  'name': instance.name,
+  'description': instance.description,
+  'arabicName': instance.arabicName,
+  'arabicDescription': instance.arabicDescription,
+  'coverPictureUrl': instance.coverPictureUrl,
+  'productPictures': instance.productPictures,
+  'price': instance.price,
+  'stock': instance.stock,
+  'weight': instance.weight,
+  'color': instance.color,
+  'rating': instance.rating,
+  'reviewsCount': instance.reviewsCount,
+  'discountPercentage': instance.discountPercentage,
+  'sellerId': instance.sellerId,
+  'categories': instance.categories,
+};
+===== ./lib/features/home/data/models/products_model.dart =====
+import 'package:json_annotation/json_annotation.dart';
+
+part 'products_model.g.dart';
+
+@JsonSerializable()
+class ProductResponse {
+  final List<Item>? items;
+  final int? page;
+  final int? pageSize;
+  final int? totalCount;
+  final bool? hasNextPage;
+  final bool? hasPreviousPage;
+
+  ProductResponse({
+    required this.items,
+    this.page,
+    this.pageSize,
+    this.totalCount,
+    this.hasNextPage,
+    this.hasPreviousPage,
+  });
+
+  factory ProductResponse.fromJson(Map<String, dynamic> json) =>
+      _$ProductResponseFromJson(json);
+}
+
+@JsonSerializable()
+class Item {
+  final String? id;
+  final String? productCode;
+  final String? name;
+  final String? description;
+  final String? arabicName;
+  final String? arabicDescription;
+  final String? coverPictureUrl;
+  final List<String>? productPictures;
+  final double? price;
+  final int? stock;
+  final double? weight;
+  final String? color;
+  final double? rating;
+  final int? reviewsCount;
+  final double? discountPercentage;
+  final String? sellerId;
+  final List<String>? categories;
+
+  Item({
+    required this.id,
+    required this.productCode,
+    required this.name,
+    required this.description,
+    required this.arabicName,
+    required this.arabicDescription,
+    required this.coverPictureUrl,
+    required this.productPictures,
+    required this.price,
+    required this.stock,
+    required this.weight,
+    required this.color,
+    required this.rating,
+    required this.reviewsCount,
+    required this.discountPercentage,
+    required this.sellerId,
+    required this.categories,
+  });
+
+  factory Item.fromJson(Map<String, dynamic> json) => _$ItemFromJson(json);
+}
+===== ./lib/features/home/domain/repositories/home_repository.dart =====
+import 'package:laza/features/home/domain/entities/product_entity.dart';
+
+abstract interface class HomeRepository {
+  Future<List<Product>>? getProducts();
+}
+===== ./lib/features/home/domain/entities/product_entity.dart =====
+class Product {
+  final String? id;
+  final String? productCode;
+  final String? name;
+  final String? description;
+  final String? arabicName;
+  final String? arabicDescription;
+  final String? coverPictureUrl;
+  final List<String>? productPictures;
+  final double? price;
+  final int? stock;
+  final double? weight;
+  final String? color;
+  final double? rating;
+  final int? reviewsCount;
+  final double? discountPercentage;
+  final String? sellerId;
+  final List<String>? categories;
+
+  Product({
+    required this.id,
+    required this.productCode,
+    required this.name,
+    required this.description,
+    required this.arabicName,
+    required this.arabicDescription,
+    required this.coverPictureUrl,
+    required this.productPictures,
+    required this.price,
+    required this.stock,
+    required this.weight,
+    required this.color,
+    required this.rating,
+    required this.reviewsCount,
+    required this.discountPercentage,
+    required this.sellerId,
+    required this.categories,
+  });
+}
+===== ./lib/features/home/presentation/cubit/home_state.dart =====
+import 'package:laza/features/home/domain/entities/product_entity.dart';
+
+sealed class HomeState {}
+
+final class HomeInitial extends HomeState {}
+
+final class LoadingToLoadHomeProduct extends HomeState {}
+
+final class HomeProductsLoaded extends HomeState {
+  final List<Product>? products;
+
+  HomeProductsLoaded({required this.products});
+}
+
+final class ErrorToLoadHomeProduct extends HomeState {
+  final String message;
+
+  ErrorToLoadHomeProduct({required this.message});
+}
+===== ./lib/features/home/presentation/cubit/home_cubit.dart =====
+import 'package:bloc/bloc.dart';
+import 'package:laza/core/errors/server_exception.dart';
+import 'package:laza/features/home/domain/repositories/home_repository.dart';
+import 'package:laza/features/home/presentation/cubit/home_state.dart';
+
+class HomeCubit extends Cubit<HomeState> {
+  HomeCubit(this.homeRepository) : super(HomeInitial());
+  final HomeRepository homeRepository;
+
+  Future<void> getProducts() async {
+    emit(LoadingToLoadHomeProduct());
+    try {
+      final products = await homeRepository.getProducts();
+      emit(HomeProductsLoaded(products: products));
+    } on ServerException catch (errors) {
+      emit(ErrorToLoadHomeProduct(message: errors.errorModel.getReadableMessage()));
+    } catch (error) {
+      emit(ErrorToLoadHomeProduct(message: "SomeThing Wen't Wrong"));
+    }
+  }
+}
+===== ./lib/features/home/presentation/screen/home_screen.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:laza/di/dependency_injection.dart';
+import 'package:laza/features/home/presentation/cubit/home_cubit.dart';
+import 'package:laza/features/home/presentation/widgets/home_screen_body.dart';
+
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider(
+      create: (context) => getIt<HomeCubit>()..getProducts(),
+      child: HomeScreenBody(),
+    );
+  }
+}
+===== ./lib/features/home/presentation/widgets/brand_list.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:laza/core/constants/app_colors.dart';
+import 'package:laza/core/helper/spacing.dart';
+import 'package:laza/di/dependency_injection.dart';
+import 'package:laza/features/category/domain/entities/category_entity.dart';
+import 'package:laza/features/category/presentation/cubit/category_cubit.dart';
+import 'package:laza/features/category/presentation/cubit/category_state.dart';
+
+class BrandList extends StatelessWidget {
+  const BrandList({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider(
+      create: (context) => getIt<CategoryCubit>()..getCategories(),
+      child: SizedBox(
+        height: 50.h,
+        width: double.infinity,
+        child: BlocBuilder<CategoryCubit, CategoryState>(
+          builder: (context, state) {
+            switch (state) {
+              case LoadingToLoadCategories():
+                return const Center(child: CircularProgressIndicator());
+              case CategoriesLoaded():
+                return ListView.separated(
+                  itemCount: state.categories?.length ?? 0,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) {
+                    return _brandItem(state.categories?[index]);
+                  },
+                  separatorBuilder: (BuildContext context, int index) {
+                    return horizontalSpace(20);
+                  },
+                );
+              case ErrorToLoadCategories():
+                return const Center(child: Text('Some thing wen\'t wrong'));
+              default:
+                return SizedBox.shrink();
+            }
+          },
+        ),
+      ),
+    );
+  }
+}
+
+Widget _brandItem(Category? category) {
+  return Container(
+    height: 50.h,
+    width: 120.w,
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(10.r),
+      color: AppColors.lightGrey,
+    ),
+    child: Padding(
+      padding: EdgeInsets.only(left: 5.w, right: 10.w),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(10),
+            child: SvgPicture.network(
+              color: Colors.black,
+              fit: BoxFit.contain,
+              category?.coverPictureUrl ?? '',
+            ),
+          ),
+
+          Text(category?.name ?? ''),
+        ],
+      ),
+    ),
+  );
+}
+===== ./lib/features/home/presentation/widgets/home_screen_search_bar.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:laza/core/constants/app_colors.dart';
+import 'package:laza/features/home/presentation/widgets/custom_search_text_field.dart';
+
+class HomeScreenSearchBar extends StatelessWidget {
+  const HomeScreenSearchBar({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        CustomSearchTextField(
+          hintText: 'Search',
+          controller: TextEditingController(),
+        ),
+        Container(
+          width: 50.w,
+          height: 50.h,
+          decoration: BoxDecoration(
+            color: AppColors.primaryColor,
+            borderRadius: BorderRadius.circular(10.r),
+          ),
+          child: Icon(Icons.mic, color: Colors.white),
+        ),
+      ],
+    );
+  }
+}
+===== ./lib/features/home/presentation/widgets/home_screen_header.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:laza/core/constants/assets.dart';
+
+class HomeScreenHeader extends StatelessWidget {
+  const HomeScreenHeader({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        SvgPicture.asset(Assets.imagesSvgMenuIcon),
+        SvgPicture.asset(Assets.imagesSvgCartIcon),
+      ],
+    );
+  }
+}
+===== ./lib/features/home/presentation/widgets/custom_search_text_field.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:laza/core/constants/assets.dart';
+
+class CustomSearchTextField extends StatelessWidget {
+  const CustomSearchTextField({
+    super.key,
+    required this.hintText,
+    required this.controller,
+    this.removePrefixIcon = false,
+  });
+  final String hintText;
+  final TextEditingController controller;
+  final bool removePrefixIcon;
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: 275.w,
+      height: 50.h,
+      child: TextFormField(
+        controller: controller,
+        style: TextStyle(
+          fontSize: 15.sp,
+          color: const Color(0xFF8F959E),
+          fontWeight: FontWeight.w500,
+        ),
+        decoration: InputDecoration(
+          filled: true,
+          fillColor: const Color(0xFFF5F6FA),
+          contentPadding: EdgeInsets.symmetric(
+            horizontal: 15.w,
+            vertical: 20.h,
+          ),
+          hintText: hintText,
+          hintStyle: TextStyle(
+            fontSize: 15.sp,
+            color: const Color(0xFF8F959E),
+            fontWeight: FontWeight.w400,
+          ),
+          prefixIcon: removePrefixIcon
+              ? null
+              : Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10.w),
+                  child: SvgPicture.asset(
+                    Assets.imagesSvgSearchIcon,
+                    colorFilter: const ColorFilter.mode(
+                      Color(0xFF8F959E),
+                      BlendMode.srcIn,
+                    ),
+                    width: 20.w,
+                    height: 20.h,
+                  ),
+                ),
+          prefixIconConstraints: BoxConstraints(
+            minWidth: 30.w,
+            minHeight: 20.h,
+          ),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10.r),
+            borderSide: BorderSide.none,
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10.r),
+            borderSide: BorderSide.none,
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10.r),
+            borderSide: const BorderSide(color: Color(0xFF9775FA), width: 1.5),
+          ),
+        ),
+      ),
+    );
+  }
+}
+===== ./lib/features/home/presentation/widgets/product_list.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:laza/core/common/widgets/product_item.dart';
+import 'package:laza/features/home/domain/entities/product_entity.dart';
+import 'package:laza/features/home/presentation/cubit/home_cubit.dart';
+import 'package:laza/features/home/presentation/cubit/home_state.dart';
+
+class ProductList extends StatelessWidget {
+  const ProductList({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocBuilder<HomeCubit, HomeState>(
+      buildWhen: (previous, current) {
+        return current is HomeProductsLoaded ||
+            current is ErrorToLoadHomeProduct ||
+            current is LoadingToLoadHomeProduct;
+      },
+      builder: (context, state) {
+        return switch (state) {
+          LoadingToLoadHomeProduct() => _loading(),
+          HomeProductsLoaded() => _products(state.products ?? []),
+          ErrorToLoadHomeProduct() => _error(state.message),
+          _ => const SizedBox.shrink(),
+        };
+      },
+    );
+  }
+
+  Widget _products(List<Product> products) {
+    return GridView.builder(
+      itemCount: products.length,
+      shrinkWrap: true,
+      physics: NeverScrollableScrollPhysics(),
+
+      itemBuilder: (context, index) {
+        return ProductItem(product: products[index]);
+      },
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2,
+        mainAxisSpacing: 10,
+        crossAxisSpacing: 10,
+        childAspectRatio: 8 / 14,
+      ),
+    );
+  }
+
+  Widget _error(String message) {
+    return Center(child: Text(message));
+  }
+
+  Widget _loading() {
+    return const Center(child: CircularProgressIndicator());
+  }
+}
+===== ./lib/features/home/presentation/widgets/home_screen_body.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:laza/core/common/app_text_styles.dart';
+import 'package:laza/core/helper/spacing.dart';
+import 'package:laza/features/home/presentation/widgets/brand_list.dart';
+import 'package:laza/features/home/presentation/widgets/home_screen_header.dart';
+import 'package:laza/features/home/presentation/widgets/home_screen_search_bar.dart';
+import 'package:laza/features/home/presentation/widgets/product_list.dart';
+
+class HomeScreenBody extends StatelessWidget {
+  const HomeScreenBody({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20.0.w),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              HomeScreenHeader(),
+              verticalSpace(20),
+              Text('Hello', style: AppTextStyle.we600Si28ColText),
+              verticalSpace(5),
+              Text('Welcome to Laza.', style: AppTextStyle.we400Si15ColGrey),
+              verticalSpace(20),
+              HomeScreenSearchBar(),
+              verticalSpace(20),
+              _chooseBrand(),
+              verticalSpace(17),
+              BrandList(),
+              verticalSpace(15),
+              _newArrival(),
+              verticalSpace(15),
+              ProductList(),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _newArrival() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text('New Arrival', style: AppTextStyle.we500Si17ColText),
+        Text(
+          'View All',
+          style: AppTextStyle.we400Si15ColGrey.copyWith(fontSize: 13),
+        ),
+      ],
+    );
+  }
+
+  Widget _chooseBrand() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text('Choose Brand', style: AppTextStyle.we500Si17ColText),
+        Text(
+          'View All',
+          style: AppTextStyle.we400Si15ColGrey.copyWith(fontSize: 13),
+        ),
+      ],
+    );
+  }
+
+ 
+}
+
+===== ./lib/features/category/data/datasources/category_api_service.dart =====
+import 'package:dio/dio.dart';
+import 'package:laza/api/api_constant.dart';
+import 'package:laza/features/category/data/models/category_model.dart';
+import 'package:retrofit/retrofit.dart';
+
+part 'category_api_service.g.dart';
+
+@RestApi(baseUrl: ApiConstant.baseUrl)
+abstract class CategoryApiService {
+  factory CategoryApiService(Dio dio) = _CategoryApiService;
+
+  @GET(ApiConstant.categoryEndPoint)
+  Future<CategoriesResponse> getCategories();
+}
+===== ./lib/features/category/data/datasources/category_api_service.g.dart =====
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'category_api_service.dart';
+
+// dart format off
+
+// **************************************************************************
+// RetrofitGenerator
+// **************************************************************************
+
+// ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers,unused_element,unnecessary_string_interpolations,unused_element_parameter
+
+class _CategoryApiService implements CategoryApiService {
+  _CategoryApiService(this._dio, {this.baseUrl, this.errorLogger}) {
+    baseUrl ??= 'https://accessories-eshop.runasp.net/';
+  }
+
+  final Dio _dio;
+
+  String? baseUrl;
+
+  final ParseErrorLogger? errorLogger;
+
+  @override
+  Future<CategoriesResponse> getCategories() async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    const Map<String, dynamic>? _data = null;
+    final _options = _setStreamType<CategoriesResponse>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            'api/categories',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late CategoriesResponse _value;
+    try {
+      _value = CategoriesResponse.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
+  }
+
+  RequestOptions _setStreamType<T>(RequestOptions requestOptions) {
+    if (T != dynamic &&
+        !(requestOptions.responseType == ResponseType.bytes ||
+            requestOptions.responseType == ResponseType.stream)) {
+      if (T == String) {
+        requestOptions.responseType = ResponseType.plain;
+      } else {
+        requestOptions.responseType = ResponseType.json;
+      }
+    }
+    return requestOptions;
+  }
+
+  String _combineBaseUrls(String dioBaseUrl, String? baseUrl) {
+    if (baseUrl == null || baseUrl.trim().isEmpty) {
+      return dioBaseUrl;
+    }
+
+    final url = Uri.parse(baseUrl);
+
+    if (url.isAbsolute) {
+      return url.toString();
+    }
+
+    return Uri.parse(dioBaseUrl).resolveUri(url).toString();
+  }
+}
+
+// dart format on
+===== ./lib/features/category/data/mapper/category_mapper.dart =====
+import 'package:laza/features/category/data/models/category_model.dart';
+import 'package:laza/features/category/domain/entities/category_entity.dart';
+
+class CategoryMapper {
+  static List<Category> toEntity(CategoriesResponse? response) {
+    if (response == null || response.categories == null) {
+      return [];
+    }
+
+    return response.categories!.map((categoryModel) {
+      return Category(
+        id: categoryModel.id,
+        name: categoryModel.name,
+        description: categoryModel.description,
+        coverPictureUrl: categoryModel.coverPictureUrl,
+      );
+    }).toList();
+  }
+}
+===== ./lib/features/category/data/repositories/category_repository_impl.dart =====
+import 'package:dio/dio.dart';
+import 'package:laza/core/errors/handle_exception.dart';
+import 'package:laza/features/category/data/datasources/category_api_service.dart';
+import 'package:laza/features/category/data/mapper/category_mapper.dart';
+import 'package:laza/features/category/domain/entities/category_entity.dart';
+import 'package:laza/features/category/domain/repositories/category_repository.dart';
+
+class CategoryRepositoryImpl implements CategoryRepository {
+  final CategoryApiService apiService;
+
+  CategoryRepositoryImpl({required this.apiService});
+
+  @override
+  Future<List<Category>>? getCategories() async {
+    try {
+      final response = await apiService.getCategories();
+      return CategoryMapper.toEntity(response);
+    } on DioException catch (error) {
+      HandleException.handle(error);
+      rethrow;
+    }
+  }
+}
+===== ./lib/features/category/data/models/category_model.g.dart =====
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'category_model.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+CategoryModel _$CategoryModelFromJson(Map<String, dynamic> json) =>
+    CategoryModel(
+      id: json['id'] as String?,
+      name: json['name'] as String?,
+      description: json['description'] as String?,
+      coverPictureUrl: json['coverPictureUrl'] as String?,
+    );
+
+Map<String, dynamic> _$CategoryModelToJson(CategoryModel instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'name': instance.name,
+      'description': instance.description,
+      'coverPictureUrl': instance.coverPictureUrl,
+    };
+
+CategoriesResponse _$CategoriesResponseFromJson(Map<String, dynamic> json) =>
+    CategoriesResponse(
+      categories: (json['categories'] as List<dynamic>?)
+          ?.map((e) => CategoryModel.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$CategoriesResponseToJson(CategoriesResponse instance) =>
+    <String, dynamic>{'categories': instance.categories};
+===== ./lib/features/category/data/models/category_model.dart =====
+
+import 'package:json_annotation/json_annotation.dart';
+
+part 'category_model.g.dart';
+
+
+@JsonSerializable()
+class CategoryModel {
+  String? id;
+  String? name;
+  String? description;
+  String? coverPictureUrl;
+
+  CategoryModel({this.id, this.name, this.description, this.coverPictureUrl});
+  factory CategoryModel.fromJson(Map<String, dynamic> json) =>
+      _$CategoryModelFromJson(json);
+}
+
+@JsonSerializable()
+class CategoriesResponse {
+  List<CategoryModel>? categories;
+
+  CategoriesResponse({this.categories});
+  factory CategoriesResponse.fromJson(Map<String, dynamic> json) =>
+      _$CategoriesResponseFromJson(json);
+}
+===== ./lib/features/category/domain/repositories/category_repository.dart =====
+import 'package:laza/features/category/domain/entities/category_entity.dart';
+
+abstract interface class CategoryRepository {
+  Future<List<Category>>? getCategories();
+}
+===== ./lib/features/category/domain/entities/category_entity.dart =====
+class Category {
+  final String? id;
+  final String? name;
+  final String? description;
+  final String? coverPictureUrl;
+
+  Category({
+    required this.id,
+    required this.name,
+    required this.description,
+    required this.coverPictureUrl,
+  });
+}
+===== ./lib/features/category/presentation/cubit/category_cubit.dart =====
+import 'package:bloc/bloc.dart';
+import 'package:laza/core/errors/server_exception.dart';
+import 'package:laza/features/category/domain/repositories/category_repository.dart';
+import 'package:laza/features/category/presentation/cubit/category_state.dart';
+
+class CategoryCubit extends Cubit<CategoryState> {
+  CategoryCubit(this.categoryRepository) : super(CategoryInitial());
+  final CategoryRepository categoryRepository;
+
+  Future<void> getCategories() async {
+    emit(LoadingToLoadCategories());
+    try {
+      final categories = await categoryRepository.getCategories();
+      emit(CategoriesLoaded(categories: categories));
+    } on ServerException catch (errors) {
+      emit(ErrorToLoadCategories(message: errors.errorModel.getReadableMessage()));
+    } catch (error) {
+      print(error);
+      emit(ErrorToLoadCategories(message: "SomeThing Wen't Wrong"));
+    }
+  }
+}
+===== ./lib/features/category/presentation/cubit/category_state.dart =====
+import 'package:laza/features/category/domain/entities/category_entity.dart';
+
+sealed class CategoryState {}
+
+final class CategoryInitial extends CategoryState {}
+
+final class LoadingToLoadCategories extends CategoryState {}
+
+final class CategoriesLoaded extends CategoryState {
+  final List<Category>? categories;
+
+  CategoriesLoaded({required this.categories});
+}
+
+final class ErrorToLoadCategories extends CategoryState {
+  final String message;
+
+  ErrorToLoadCategories({required this.message});
+}
+===== ./lib/features/cart/data/datasources/cart_api_service.g.dart =====
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'cart_api_service.dart';
+
+// dart format off
+
+// **************************************************************************
+// RetrofitGenerator
+// **************************************************************************
+
+// ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers,unused_element,unnecessary_string_interpolations,unused_element_parameter
+
+class _CartApiService implements CartApiService {
+  _CartApiService(this._dio, {this.baseUrl, this.errorLogger}) {
+    baseUrl ??= 'https://accessories-eshop.runasp.net/';
+  }
+
+  final Dio _dio;
+
+  String? baseUrl;
+
+  final ParseErrorLogger? errorLogger;
+
+  @override
+  Future<void> addToCart(AddToCartRequestModel request) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = <String, dynamic>{};
+    _data.addAll(request.toJson());
+    final _options = _setStreamType<void>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/api/cart/items',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    await _dio.fetch<void>(_options);
+  }
+
+  @override
+  Future<CartModel> getCart() async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    const Map<String, dynamic>? _data = null;
+    final _options = _setStreamType<CartModel>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/api/cart',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late CartModel _value;
+    try {
+      _value = CartModel.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
+  }
+
+  RequestOptions _setStreamType<T>(RequestOptions requestOptions) {
+    if (T != dynamic &&
+        !(requestOptions.responseType == ResponseType.bytes ||
+            requestOptions.responseType == ResponseType.stream)) {
+      if (T == String) {
+        requestOptions.responseType = ResponseType.plain;
+      } else {
+        requestOptions.responseType = ResponseType.json;
+      }
+    }
+    return requestOptions;
+  }
+
+  String _combineBaseUrls(String dioBaseUrl, String? baseUrl) {
+    if (baseUrl == null || baseUrl.trim().isEmpty) {
+      return dioBaseUrl;
+    }
+
+    final url = Uri.parse(baseUrl);
+
+    if (url.isAbsolute) {
+      return url.toString();
+    }
+
+    return Uri.parse(dioBaseUrl).resolveUri(url).toString();
+  }
+}
+
+// dart format on
+===== ./lib/features/cart/data/datasources/cart_api_service.dart =====
+import 'package:dio/dio.dart';
+import 'package:laza/api/api_constant.dart';
+import 'package:laza/features/cart/data/models/add_to_cart_request_model.dart';
+import 'package:laza/features/cart/data/models/cart_model.dart';
+import 'package:retrofit/retrofit.dart';
+
+part 'cart_api_service.g.dart';
+
+@RestApi(baseUrl: ApiConstant.baseUrl)
+abstract class CartApiService {
+  factory CartApiService(Dio dio) = _CartApiService;
+
+  @POST('/api/cart/items')
+  Future<void> addToCart(@Body() AddToCartRequestModel request);
+
+  @GET('/api/cart')
+  Future<CartModel> getCart();
+}
+===== ./lib/features/cart/data/mapper/cart_mapper.dart =====
+import 'package:laza/features/cart/data/models/cart_model.dart';
+import 'package:laza/features/cart/domain/entities/cart_entity.dart';
+
+class CartMapper {
+  static Cart toEntity(CartModel model) {
+    return Cart(
+      cartItems: model.cartItems.map((item) => _toCartItemEntity(item)).toList(),
+    );
+  }
+
+  static CartItem _toCartItemEntity(CartItemModel model) {
+    return CartItem(
+      itemId: model.itemId,
+      productId: model.productId,
+      productName: model.productName,
+      productCoverUrl: model.productCoverUrl,
+      productStock: model.productStock,
+      weightInGrams: model.weightInGrams,
+      quantity: model.quantity,
+      discountPercentage: model.discountPercentage,
+      basePricePerUnit: model.basePricePerUnit,
+      finalPricePerUnit: model.finalPricePerUnit,
+      totalPrice: model.totalPrice,
+    );
+  }
+}
+===== ./lib/features/cart/data/repositories/cart_repository_impl.dart =====
+import 'package:dio/dio.dart';
+import 'package:laza/core/errors/handle_exception.dart';
+import 'package:laza/features/cart/data/datasources/cart_api_service.dart';
+import 'package:laza/features/cart/data/mapper/cart_mapper.dart';
+import 'package:laza/features/cart/data/models/add_to_cart_request_model.dart';
+import 'package:laza/features/cart/domain/entities/cart_entity.dart';
+import 'package:laza/features/cart/domain/repositories/cart_repository.dart';
+
+class CartRepositoryImpl implements CartRepository {
+  final CartApiService apiService;
+
+  CartRepositoryImpl({required this.apiService});
+
+  @override
+  Future<void> addToCart(String productId, int quantity) async {
+    try {
+      await apiService.addToCart(AddToCartRequestModel(
+        productId: productId,
+        quantity: quantity,
+      ));
+    } on DioException catch (error) {
+      HandleException.handle(error);
+      rethrow;
+    }
+  }
+
+  @override
+  Future<Cart> getCart() async {
+    try {
+      final response = await apiService.getCart();
+      return CartMapper.toEntity(response);
+    } on DioException catch (error) {
+      HandleException.handle(error);
+      rethrow;
+    }
+  }
+}
+===== ./lib/features/cart/data/models/cart_model.dart =====
+import 'package:json_annotation/json_annotation.dart';
+
+part 'cart_model.g.dart';
+
+@JsonSerializable()
+class CartItemModel {
+  final String itemId;
+  final String productId;
+  final String productName;
+  final String productCoverUrl;
+  final int productStock;
+  final double weightInGrams;
+  final int quantity;
+  final int discountPercentage;
+  final double basePricePerUnit;
+  final double finalPricePerUnit;
+  final double totalPrice;
+
+  CartItemModel({
+    required this.itemId,
+    required this.productId,
+    required this.productName,
+    required this.productCoverUrl,
+    required this.productStock,
+    required this.weightInGrams,
+    required this.quantity,
+    required this.discountPercentage,
+    required this.basePricePerUnit,
+    required this.finalPricePerUnit,
+    required this.totalPrice,
+  });
+
+  factory CartItemModel.fromJson(Map<String, dynamic> json) =>
+      _$CartItemModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$CartItemModelToJson(this);
+}
+
+@JsonSerializable()
+class CartModel {
+  final String cartId;
+  final List<CartItemModel> cartItems;
+
+  CartModel({required this.cartId, required this.cartItems});
+
+  factory CartModel.fromJson(Map<String, dynamic> json) =>
+      _$CartModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$CartModelToJson(this);
+}
+===== ./lib/features/cart/data/models/add_to_cart_request_model.dart =====
+import 'package:json_annotation/json_annotation.dart';
+
+part 'add_to_cart_request_model.g.dart';
+
+@JsonSerializable()
+class AddToCartRequestModel {
+  final String productId;
+  final int quantity;
+
+  AddToCartRequestModel({required this.productId, required this.quantity});
+
+  factory AddToCartRequestModel.fromJson(Map<String, dynamic> json) =>
+      _$AddToCartRequestModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$AddToCartRequestModelToJson(this);
+}
+===== ./lib/features/cart/data/models/cart_model.g.dart =====
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'cart_model.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+CartItemModel _$CartItemModelFromJson(Map<String, dynamic> json) =>
+    CartItemModel(
+      itemId: json['itemId'] as String,
+      productId: json['productId'] as String,
+      productName: json['productName'] as String,
+      productCoverUrl: json['productCoverUrl'] as String,
+      productStock: (json['productStock'] as num).toInt(),
+      weightInGrams: (json['weightInGrams'] as num).toDouble(),
+      quantity: (json['quantity'] as num).toInt(),
+      discountPercentage: (json['discountPercentage'] as num).toInt(),
+      basePricePerUnit: (json['basePricePerUnit'] as num).toDouble(),
+      finalPricePerUnit: (json['finalPricePerUnit'] as num).toDouble(),
+      totalPrice: (json['totalPrice'] as num).toDouble(),
+    );
+
+Map<String, dynamic> _$CartItemModelToJson(CartItemModel instance) =>
+    <String, dynamic>{
+      'itemId': instance.itemId,
+      'productId': instance.productId,
+      'productName': instance.productName,
+      'productCoverUrl': instance.productCoverUrl,
+      'productStock': instance.productStock,
+      'weightInGrams': instance.weightInGrams,
+      'quantity': instance.quantity,
+      'discountPercentage': instance.discountPercentage,
+      'basePricePerUnit': instance.basePricePerUnit,
+      'finalPricePerUnit': instance.finalPricePerUnit,
+      'totalPrice': instance.totalPrice,
+    };
+
+CartModel _$CartModelFromJson(Map<String, dynamic> json) => CartModel(
+  cartId: json['cartId'] as String,
+  cartItems: (json['cartItems'] as List<dynamic>)
+      .map((e) => CartItemModel.fromJson(e as Map<String, dynamic>))
+      .toList(),
+);
+
+Map<String, dynamic> _$CartModelToJson(CartModel instance) => <String, dynamic>{
+  'cartId': instance.cartId,
+  'cartItems': instance.cartItems,
+};
+===== ./lib/features/cart/data/models/add_to_cart_request_model.g.dart =====
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'add_to_cart_request_model.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+AddToCartRequestModel _$AddToCartRequestModelFromJson(
+  Map<String, dynamic> json,
+) => AddToCartRequestModel(
+  productId: json['productId'] as String,
+  quantity: (json['quantity'] as num).toInt(),
+);
+
+Map<String, dynamic> _$AddToCartRequestModelToJson(
+  AddToCartRequestModel instance,
+) => <String, dynamic>{
+  'productId': instance.productId,
+  'quantity': instance.quantity,
+};
+===== ./lib/features/cart/domain/repositories/cart_repository.dart =====
+import 'package:laza/features/cart/domain/entities/cart_entity.dart';
+
+abstract interface class CartRepository {
+  Future<void> addToCart(String productId, int quantity);
+  Future<Cart> getCart();
+}
+===== ./lib/features/cart/domain/entities/cart_entity.dart =====
+class CartItem {
+  final String itemId;
+  final String productId;
+  final String productName;
+  final String productCoverUrl;
+  final int productStock;
+  final double weightInGrams;
+  final int quantity;
+  final int discountPercentage;
+  final double basePricePerUnit;
+  final double finalPricePerUnit;
+  final double totalPrice;
+
+  CartItem({
+    required this.itemId,
+    required this.productId,
+    required this.productName,
+    required this.productCoverUrl,
+    required this.productStock,
+    required this.weightInGrams,
+    required this.quantity,
+    required this.discountPercentage,
+    required this.basePricePerUnit,
+    required this.finalPricePerUnit,
+    required this.totalPrice,
+  });
+}
+
+class Cart {
+  final List<CartItem> cartItems;
+
+  Cart({required this.cartItems});
+}
+===== ./lib/features/cart/presentation/cubit/cart_state.dart =====
+import 'package:laza/features/cart/domain/entities/cart_entity.dart';
+
+abstract class CartState {}
+
+class CartInitial extends CartState {}
+
+class AddToCartLoading extends CartState {}
+
+class AddToCartSuccess extends CartState {}
+
+class AddToCartFailure extends CartState {
+  final String message;
+
+  AddToCartFailure({required this.message});
+}
+
+class GetCartLoading extends CartState {}
+
+class GetCartSuccess extends CartState {
+  final Cart cart;
+
+  GetCartSuccess({required this.cart});
+}
+
+class GetCartFailure extends CartState {
+  final String message;
+
+  GetCartFailure({required this.message});
+}
+===== ./lib/features/cart/presentation/cubit/cart_cubit.dart =====
+import 'package:bloc/bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:laza/core/errors/exceptions.dart';
+import 'package:laza/features/cart/domain/repositories/cart_repository.dart';
+import 'package:laza/features/cart/presentation/cubit/cart_state.dart';
+
+class CartCubit extends Cubit<CartState> {
+  final CartRepository cartRepository;
+
+  CartCubit({required this.cartRepository}) : super(CartInitial());
+
+  Future<void> addToCart(String productId, int quantity) async {
+    emit(AddToCartLoading());
+    try {
+      await cartRepository.addToCart(productId, quantity);
+      emit(AddToCartSuccess());
+    } on ServerException catch (error) {
+      emit(AddToCartFailure(message: error.message));
+    } catch (e) {
+      emit(AddToCartFailure(message: e.toString()));
+    }
+  }
+
+  Future<void> getCart() async {
+    emit(GetCartLoading());
+    try {
+      final cart = await cartRepository.getCart();
+      emit(GetCartSuccess(cart: cart));
+    } on ServerException catch (error) {
+      emit(GetCartFailure(message: error.message));
+    } catch (e) {
+      emit(GetCartFailure(message: e.toString()));
+    }
+  }
+}
+===== ./lib/features/cart/presentation/screens/cart_screen.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:laza/core/common/widgets/custom_material_button.dart';
+import 'package:laza/di/dependency_injection.dart';
+import 'package:laza/features/cart/presentation/cubit/cart_cubit.dart';
+import 'package:laza/features/cart/presentation/screens/widgets/cart_screen_body.dart';
+
+class CartScreen extends StatelessWidget {
+  const CartScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider(
+      create: (context) => getIt<CartCubit>()..getCart(),
+      child: const Scaffold(
+        bottomNavigationBar: CustomMaterialButton(text: 'Checkout'),
+        backgroundColor: Colors.white,
+        body: CartScreenBody(),
+      ),
+    );
+  }
+}
+===== ./lib/features/cart/presentation/screens/widgets/cart_header.dart =====
+import 'package:flutter/material.dart';
+import 'package:laza/core/common/app_text_styles.dart';
+
+class CartHeader extends StatelessWidget {
+  const CartHeader({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Text('Cart', style: AppTextStyle.we600Si28ColText),
+    );
+  }
+}
+===== ./lib/features/cart/presentation/screens/widgets/payment_method.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:laza/core/common/app_text_styles.dart';
+import 'package:laza/core/constants/assets.dart';
+
+class PaymentMethod extends StatelessWidget {
+  const PaymentMethod({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text('Payment Method', style: AppTextStyle.we500Si17ColText),
+            const Icon(Icons.arrow_forward_ios, size: 18),
+          ],
+        ),
+        const SizedBox(height: 15),
+        Row(
+          children: [
+            SvgPicture.asset(Assets.imagesSvgVisa,), 
+            const SizedBox(width: 15),
+            const Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('Visa Classic'),
+                  Text('**** 7690', style: AppTextStyle.we400Si15ColGrey),
+                ],
+              ),
+            ),
+            const Icon(Icons.check_circle, color: Colors.green),
+          ],
+        ),
+      ],
+    );
+  }
+}
+===== ./lib/features/cart/presentation/screens/widgets/cart_item_list.dart =====
+import 'package:flutter/material.dart';
+import 'package:laza/core/common/app_text_styles.dart';
+import 'package:laza/features/cart/domain/entities/cart_entity.dart';
+
+class CartItemList extends StatelessWidget {
+  const CartItemList({super.key, required this.cartItems});
+
+  final List<CartItem> cartItems;
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.separated(
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
+      itemCount: cartItems.length,
+      separatorBuilder: (context, index) => const SizedBox(height: 20),
+      itemBuilder: (context, index) {
+        final item = cartItems[index];
+        return CartItemWidget(item: item);
+      },
+    );
+  }
+}
+
+class CartItemWidget extends StatelessWidget {
+  const CartItemWidget({super.key, required this.item});
+
+  final CartItem item;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(15),
+      decoration: BoxDecoration(
+        color: const Color(0xFFF5F6FA),
+        borderRadius: BorderRadius.circular(15),
+      ),
+      child: Row(
+        children: [
+          Image.network(item.productCoverUrl, width: 100, height: 100, fit: BoxFit.cover),
+          const SizedBox(width: 15),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(item.productName, style: AppTextStyle.we500Si17ColText.copyWith(fontSize: 15), maxLines: 2, overflow: TextOverflow.ellipsis,),
+                Text('\$${item.finalPricePerUnit.toStringAsFixed(2)}', style: AppTextStyle.we400Si15ColGrey),
+                const SizedBox(height: 10),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
+                        const CircleAvatar(radius: 15, child: Icon(Icons.remove, size: 15)),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                          child: Text(item.quantity.toString(), style: AppTextStyle.we500Si17ColText),
+                        ),
+                        const CircleAvatar(radius: 15, child: Icon(Icons.add, size: 15)),
+                      ],
+                    ),
+                    const CircleAvatar(
+                      backgroundColor: Colors.white,
+                      child: Icon(Icons.delete_outline, color: Colors.red),
+                    ),
+                  ],
+                )
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+===== ./lib/features/cart/presentation/screens/widgets/order_summary.dart =====
+import 'package:flutter/material.dart';
+import 'package:laza/core/common/app_text_styles.dart';
+
+class OrderSummary extends StatelessWidget {
+  const OrderSummary({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        SizedBox(height: 20),
+        Text('Order Info', style: AppTextStyle.we500Si17ColText),
+        SizedBox(height: 10),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text('Subtotal', style: AppTextStyle.we400Si15ColGrey),
+            Text('\$110', style: AppTextStyle.we500Si17ColText),
+          ],
+        ),
+        SizedBox(height: 10),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text('Shipping cost', style: AppTextStyle.we400Si15ColGrey),
+            Text('\$10', style: AppTextStyle.we500Si17ColText),
+          ],
+        ),
+        SizedBox(height: 10),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text('Total', style: AppTextStyle.we400Si15ColGrey),
+            Text('\$120', style: AppTextStyle.we500Si17ColText),
+          ],
+        ),
+      ],
+    );
+  }
+}
+===== ./lib/features/cart/presentation/screens/widgets/delivery_address.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:laza/core/common/app_text_styles.dart';
+import 'package:laza/core/constants/assets.dart';
+
+class DeliveryAddress extends StatelessWidget {
+  const DeliveryAddress({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text('Delivery Address', style: AppTextStyle.we500Si17ColText),
+            const Icon(Icons.arrow_forward_ios, size: 18),
+          ],
+        ),
+        const SizedBox(height: 15),
+        Row(
+          children: [
+            SvgPicture.asset(Assets.imagesSvgDelivery),
+            const SizedBox(width: 15),
+            const Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('Chhatak, Sunamgonj 12/8AB'),
+                  Text('Sylhet', style: AppTextStyle.we400Si15ColGrey),
+                ],
+              ),
+            ),
+            const Icon(Icons.check_circle, color: Colors.green),
+          ],
+        ),
+      ],
+    );
+  }
+}
+===== ./lib/features/cart/presentation/screens/widgets/cart_screen_body.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:laza/core/helper/spacing.dart';
+import 'package:laza/features/cart/presentation/cubit/cart_cubit.dart';
+import 'package:laza/features/cart/presentation/cubit/cart_state.dart';
+import 'package:laza/features/cart/presentation/screens/widgets/cart_header.dart';
+import 'package:laza/features/cart/presentation/screens/widgets/cart_item_list.dart';
+import 'package:laza/features/cart/presentation/screens/widgets/order_summary.dart';
+import 'package:laza/features/cart/presentation/screens/widgets/delivery_address.dart';
+import 'package:laza/features/cart/presentation/screens/widgets/payment_method.dart';
+
+class CartScreenBody extends StatelessWidget {
+  const CartScreenBody({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: BlocBuilder<CartCubit, CartState>(
+        buildWhen: (previous, current) {
+          return current is GetCartLoading ||
+              current is GetCartSuccess ||
+              current is GetCartFailure;
+        },
+        builder: (context, state) {
+          switch (state) {
+            case GetCartLoading():
+              return const Center(child: CircularProgressIndicator());
+            case GetCartSuccess():
+              return Column(
+                children: [
+                  const CartHeader(),
+                   verticalSpace(20),
+                  Expanded(
+                    child: SingleChildScrollView(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            CartItemList(cartItems: state.cart.cartItems),
+                            const SizedBox(height: 30),
+                            const DeliveryAddress(),
+                            const SizedBox(height: 30),
+                            const PaymentMethod(),
+                            const SizedBox(height: 30),
+                            const OrderSummary(),
+                            const SizedBox(height: 20),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              );
+            case GetCartFailure():
+              return Center(child: Text(state.message));
+            default:
+              return const SizedBox.shrink();
+          }
+        },
+      ),
+    );
+  }
+}
+===== ./lib/features/add_review/data/datasources/add_review_api_service.g.dart =====
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'add_review_api_service.dart';
+
+// dart format off
+
+// **************************************************************************
+// RetrofitGenerator
+// **************************************************************************
+
+// ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers,unused_element,unnecessary_string_interpolations,unused_element_parameter
+
+class _AddReviewApiService implements AddReviewApiService {
+  _AddReviewApiService(this._dio, {this.baseUrl, this.errorLogger}) {
+    baseUrl ??= 'https://accessories-eshop.runasp.net/';
+  }
+
+  final Dio _dio;
+
+  String? baseUrl;
+
+  final ParseErrorLogger? errorLogger;
+
+  @override
+  Future<AddReviewResponseModel> addReview(
+    String userId,
+    AddReviewRequestModel request,
+  ) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = <String, dynamic>{};
+    _data.addAll(request.toJson());
+    final _options = _setStreamType<AddReviewResponseModel>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            'api/reviews/${userId}',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late AddReviewResponseModel _value;
+    try {
+      _value = AddReviewResponseModel.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
+  }
+
+  RequestOptions _setStreamType<T>(RequestOptions requestOptions) {
+    if (T != dynamic &&
+        !(requestOptions.responseType == ResponseType.bytes ||
+            requestOptions.responseType == ResponseType.stream)) {
+      if (T == String) {
+        requestOptions.responseType = ResponseType.plain;
+      } else {
+        requestOptions.responseType = ResponseType.json;
+      }
+    }
+    return requestOptions;
+  }
+
+  String _combineBaseUrls(String dioBaseUrl, String? baseUrl) {
+    if (baseUrl == null || baseUrl.trim().isEmpty) {
+      return dioBaseUrl;
+    }
+
+    final url = Uri.parse(baseUrl);
+
+    if (url.isAbsolute) {
+      return url.toString();
+    }
+
+    return Uri.parse(dioBaseUrl).resolveUri(url).toString();
+  }
+}
+
+// dart format on
+===== ./lib/features/add_review/data/datasources/add_review_api_service.dart =====
+import 'package:dio/dio.dart';
+import 'package:laza/api/api_constant.dart';
+import 'package:laza/features/add_review/data/models/add_review_model.dart';
+import 'package:retrofit/retrofit.dart';
+
+part 'add_review_api_service.g.dart';
+
+@RestApi(baseUrl: ApiConstant.baseUrl)
+abstract class AddReviewApiService {
+  factory AddReviewApiService(Dio dio) = _AddReviewApiService;
+
+  @POST('${ApiConstant.reviewsEndPoint}/{userId}')
+  Future<AddReviewResponseModel> addReview(
+    @Path('userId') String userId,
+    @Body() AddReviewRequestModel request,
+  );
+}
+===== ./lib/features/add_review/data/mapper/add_review_mapper.dart =====
+import 'package:laza/features/add_review/data/models/add_review_model.dart';
+import 'package:laza/features/add_review/domain/entities/add_review_entity.dart';
+
+class AddReviewMapper {
+  static AddReviewResponseModel toModel(AddReviewRequest request) {
+    return AddReviewResponseModel(
+      message: null,
+    );
+  }
+
+  static AddReviewRequestModel toRequestModel(AddReviewRequest request) {
+    return AddReviewRequestModel(
+      productId: request.productId,
+      comment: request.comment,
+      rating: request.rating,
+    );
+  }
+
+  static AddReviewResponse toEntity(AddReviewResponseModel? response) {
+    if (response == null) {
+      return AddReviewResponse(
+        message: null,
+      );
+    }
+
+    return AddReviewResponse(
+      message: response.message,
+    );
+  }
+}
+===== ./lib/features/add_review/data/repositories/add_review_repository_impl.dart =====
+import 'package:dio/dio.dart';
+import 'package:laza/core/errors/handle_exception.dart';
+import 'package:laza/features/add_review/data/datasources/add_review_api_service.dart';
+import 'package:laza/features/add_review/data/mapper/add_review_mapper.dart';
+import 'package:laza/features/add_review/domain/entities/add_review_entity.dart';
+import 'package:laza/features/add_review/domain/repositories/add_review_repository.dart';
+
+class AddReviewRepositoryImpl implements AddReviewRepository {
+  final AddReviewApiService apiService;
+
+  AddReviewRepositoryImpl({required this.apiService});
+
+  @override
+  Future<AddReviewResponse>? addReview(String userId, AddReviewRequest request) async {
+    try {
+      final requestModel = AddReviewMapper.toRequestModel(request);
+      final response = await apiService.addReview(userId, requestModel);
+      return AddReviewMapper.toEntity(response);
+    } on DioException catch (error) {
+      HandleException.handle(error);
+      rethrow;
+    }
+  }
+}
+===== ./lib/features/add_review/data/models/add_review_model.g.dart =====
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'add_review_model.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+AddReviewRequestModel _$AddReviewRequestModelFromJson(
+  Map<String, dynamic> json,
+) => AddReviewRequestModel(
+  productId: json['productId'] as String,
+  comment: json['comment'] as String,
+  rating: (json['rating'] as num).toInt(),
+);
+
+Map<String, dynamic> _$AddReviewRequestModelToJson(
+  AddReviewRequestModel instance,
+) => <String, dynamic>{
+  'productId': instance.productId,
+  'comment': instance.comment,
+  'rating': instance.rating,
+};
+
+AddReviewResponseModel _$AddReviewResponseModelFromJson(
+  Map<String, dynamic> json,
+) => AddReviewResponseModel(message: json['message'] as String?);
+
+Map<String, dynamic> _$AddReviewResponseModelToJson(
+  AddReviewResponseModel instance,
+) => <String, dynamic>{'message': instance.message};
+===== ./lib/features/add_review/data/models/add_review_model.dart =====
+import 'package:json_annotation/json_annotation.dart';
+
+part 'add_review_model.g.dart';
+
+@JsonSerializable()
+class AddReviewRequestModel {
+  final String productId;
+  final String comment;
+  final int rating;
+
+  AddReviewRequestModel({
+    required this.productId,
+    required this.comment,
+    required this.rating,
+  });
+
+  Map<String, dynamic> toJson() => _$AddReviewRequestModelToJson(this);
+}
+
+@JsonSerializable()
+class AddReviewResponseModel {
+  final String? message;
+
+  AddReviewResponseModel({
+    this.message,
+  });
+
+  factory AddReviewResponseModel.fromJson(Map<String, dynamic> json) =>
+      _$AddReviewResponseModelFromJson(json);
+}
+===== ./lib/features/add_review/domain/repositories/add_review_repository.dart =====
+import 'package:laza/features/add_review/domain/entities/add_review_entity.dart';
+
+abstract interface class AddReviewRepository {
+  Future<AddReviewResponse>? addReview(String userId, AddReviewRequest request);
+}
+===== ./lib/features/add_review/domain/entities/add_review_entity.dart =====
+class AddReviewRequest {
+  final String productId;
+  final String comment;
+  final int rating;
+
+  AddReviewRequest({
+    required this.productId,
+    required this.comment,
+    required this.rating,
+  });
+}
+
+class AddReviewResponse {
+  final String? message;
+
+  AddReviewResponse({
+    required this.message,
+  });
+}
+===== ./lib/features/add_review/presentation/cubit/add_review_cubit.dart =====
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:laza/core/errors/server_exception.dart';
+import 'package:laza/features/add_review/domain/entities/add_review_entity.dart';
+import 'package:laza/features/add_review/domain/repositories/add_review_repository.dart';
+import 'package:laza/features/add_review/presentation/cubit/add_review_state.dart';
+
+class AddReviewCubit extends Cubit<AddReviewState> {
+  final AddReviewRepository repository;
+
+  AddReviewCubit({required this.repository}) : super(AddReviewInitial());
+
+  Future<void> addReview(String userId, AddReviewRequest request) async {
+    emit(LoadingToAddReview());
+    try {
+      final response = await repository.addReview(userId, request);
+      if (response != null) {
+        emit(ReviewAdded(response: response));
+      }
+    } on ServerException catch (error) {
+      emit(ErrorToAddReview(message: error.errorModel.getReadableMessage()));
+    } catch (e) {
+      emit(ErrorToAddReview(message: e.toString()));
+    }
+  }
+}
+===== ./lib/features/add_review/presentation/cubit/add_review_state.dart =====
+import 'package:laza/features/add_review/domain/entities/add_review_entity.dart';
+
+sealed class AddReviewState {}
+
+class AddReviewInitial extends AddReviewState {}
+
+class LoadingToAddReview extends AddReviewState {}
+
+class ReviewAdded extends AddReviewState {
+  final AddReviewResponse response;
+  ReviewAdded({required this.response});
+}
+
+class ErrorToAddReview extends AddReviewState {
+  final String message;
+  ErrorToAddReview({required this.message});
+}
+===== ./lib/features/add_review/presentation/controller/review_controllers.dart =====
+import 'package:flutter/material.dart';
+
+class AddReviewEntity {
+  String comment;
+  String name;
+  String productId;
+  int rating;
+  AddReviewEntity({
+    required this.comment,
+    required this.name,
+    required this.productId,
+    required this.rating,
+  });
+}
+
+class AddReviewController {
+  final commentController = TextEditingController();
+  final nameController = TextEditingController();
+
+  String? _productId;
+  double rating = 2.5;
+
+  set productId(String id) {
+    _productId = id.trim().isEmpty ? null : id.trim();
+  }
+
+  AddReviewEntity? get entity {
+    if (_productId == null || _productId!.isEmpty) return null;
+
+    return AddReviewEntity(
+      comment: commentController.text.trim(),
+      rating: rating.floor(),
+      productId: _productId!,
+      name: nameController.text.trim(),
+    );
+  }
+
+  void dispose() {
+    commentController.dispose();
+    nameController.dispose();
+  }
+}
+===== ./lib/features/add_review/presentation/screens/add_review_screen.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:laza/core/common/widgets/custom_material_button.dart';
+import 'package:laza/di/dependency_injection.dart';
+import 'package:laza/features/add_review/domain/entities/add_review_entity.dart';
+import 'package:laza/features/add_review/presentation/controller/review_controllers.dart';
+import 'package:laza/features/add_review/presentation/cubit/add_review_cubit.dart';
+import 'package:laza/features/reviews/presentation/cubit/review_cubit.dart';
+import 'package:laza/features/add_review/presentation/widgets/add_review_body.dart';
+
+class AddReviewScreen extends StatefulWidget {
+  const AddReviewScreen({super.key, required this.productId});
+  final String productId;
+
+  @override
+  State<AddReviewScreen> createState() => _AddReviewScreenState();
+}
+
+class _AddReviewScreenState extends State<AddReviewScreen> {
+  late final AddReviewController controller;
+
+  @override
+  void initState() {
+    super.initState();
+    controller = AddReviewController();
+    controller.productId = widget.productId;
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider<ReviewCubit>(
+      create: (context) => getIt(),
+      child: Scaffold(
+        bottomNavigationBar: CustomMaterialButton(
+          text: 'Submit Review',
+          onPressed: () async {
+            getIt<AddReviewCubit>().addReview(
+              widget.productId,
+              AddReviewRequest(
+                productId: widget.productId,
+                comment: controller.commentController.text,
+                rating: controller.rating.floor(),
+              ),
+            );
+          },
+        ),
+        backgroundColor: Colors.white,
+        body: AddReviewBody(controller: controller),
+      ),
+    );
+  }
+}
+===== ./lib/features/add_review/presentation/widgets/review_stars.dart =====
+import 'package:flutter/material.dart';
+import 'package:laza/core/common/app_text_styles.dart';
+import 'package:laza/core/constants/app_colors.dart';
+import 'package:laza/core/helper/spacing.dart';
+import 'package:laza/features/add_review/presentation/controller/review_controllers.dart';
+
+class ReviewStars extends StatefulWidget {
+  const ReviewStars({super.key, required this.controller});
+  final AddReviewController controller;
+
+  @override
+  State<ReviewStars> createState() => _ReviewStarsState();
+}
+
+class _ReviewStarsState extends State<ReviewStars> {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Text('Star', style: AppTextStyle.we500Si17ColText),
+        verticalSpace(12),
+        Row(
+          children: [
+            Text(
+              '0',
+              style: AppTextStyle.we500Si11ColPrimary.copyWith(
+                color: AppColors.textColor,
+              ),
+            ),
+            Expanded(
+              child: Slider(
+                min: 0,
+                max: 5,
+                value: widget.controller.rating,
+                onChanged: (value) {
+                  setState(() {
+                    widget.controller.rating = value;
+                  });
+                },
+              ),
+            ),
+            Text(
+              '5.0',
+              style: AppTextStyle.we500Si11ColPrimary.copyWith(
+                color: AppColors.textColor,
+              ),
+            ),
+          ],
+        ),
+        verticalSpace(12),
+        Text(
+          widget.controller.rating.floor().toString(),
+          style: AppTextStyle.we500Si17ColText,
+        ),
+      ],
+    );
+  }
+}
+===== ./lib/features/add_review/presentation/widgets/add_reviews_form_fields.dart =====
+import 'package:flutter/material.dart';
+import 'package:laza/core/common/app_text_styles.dart';
+import 'package:laza/core/helper/spacing.dart';
+import 'package:laza/features/add_review/presentation/controller/review_controllers.dart';
+import 'package:laza/features/add_review/presentation/widgets/custom_text_form_filed.dart';
+
+class AddReviewFormFields extends StatelessWidget {
+  const AddReviewFormFields({super.key, required this.controller});
+  final AddReviewController controller;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        CustomTextFormFiled(
+          hintText: 'Type your name',
+          controller: controller.nameController,
+          maxLines: 1,
+        ),
+        verticalSpace(20),
+        Text('How was your experience ?', style: AppTextStyle.we500Si17ColText),
+        verticalSpace(10),
+        CustomTextFormFiled(
+          hintText: 'Describe your experience?',
+          controller: controller.commentController,
+          maxLines: 7,
+        ),
+      ],
+    );
+  }
+}
+===== ./lib/features/add_review/presentation/widgets/custom_text_form_filed.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:laza/core/common/app_text_styles.dart';
+import 'package:laza/core/constants/app_colors.dart';
+
+class CustomTextFormFiled extends StatelessWidget {
+  const CustomTextFormFiled({
+    super.key,
+    required this.hintText,
+    required this.controller,
+    required this.maxLines,
+  });
+
+  final String hintText;
+  final TextEditingController controller;
+  final int maxLines;
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      controller: controller,
+      maxLines: maxLines,
+      decoration: InputDecoration(
+        fillColor: AppColors.lightGrey,
+        filled: true,
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10.r),
+          borderSide: BorderSide.none,
+        ),
+        hintText: hintText,
+        hintStyle: AppTextStyle.we400Si15ColGrey,
+      ),
+    );
+  }
+}
+===== ./lib/features/add_review/presentation/widgets/add_review_body.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:laza/core/common/app_text_styles.dart';
+import 'package:laza/core/helper/spacing.dart';
+import 'package:laza/features/add_review/presentation/controller/review_controllers.dart';
+import 'package:laza/features/add_review/presentation/widgets/add_reviews_form_fields.dart';
+import 'package:laza/features/add_review/presentation/widgets/review_stars.dart';
+import 'package:laza/features/reviews/presentation/widgets/review_header.dart';
+
+class AddReviewBody extends StatelessWidget {
+  const AddReviewBody({super.key, required this.controller});
+  final AddReviewController controller;
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      child: SafeArea(
+        child: Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20.0.w),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  ReviewHeader(),
+                  verticalSpace(38),
+                  Text('Name', style: AppTextStyle.we500Si17ColText),
+                  verticalSpace(10),
+                  AddReviewFormFields(controller: controller),
+                  verticalSpace(20),
+                  ReviewStars(controller: controller),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+===== ./lib/features/product_details/presentation/screen/product_details_screen.dart =====
+import 'package:flutter/material.dart';
+import 'package:laza/features/product_details/presentation/widgets/product_details_body.dart';
+import 'package:laza/features/home/domain/entities/product_entity.dart';
+
+class ProductDetailsScreen extends StatelessWidget {
+  const ProductDetailsScreen({super.key, required this.product});
+  final Product product;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: ProductDetailsBody(product: product),
+    );
+  }
+}
+===== ./lib/features/product_details/presentation/widgets/product_image_list.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:laza/core/helper/spacing.dart';
+import 'package:laza/features/home/domain/entities/product_entity.dart';
+
+class ProductImageList extends StatelessWidget {
+  const ProductImageList({super.key, required this.product});
+  final Product product;
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 77,
+      child: ListView.separated(
+        scrollDirection: Axis.horizontal,
+        itemBuilder: (context, index) {
+          return ClipRRect(
+            borderRadius: BorderRadius.circular(10.r),
+            child: Image.network(
+              fit: BoxFit.fill,
+              width: 77.w,
+              height: 77.h,
+              product.coverPictureUrl ?? '',
+            ),
+          );
+        },
+        separatorBuilder: (context, index) {
+          return horizontalSpace(9);
+        },
+        itemCount: 10,
+      ),
+    );
+  }
+}
+===== ./lib/features/product_details/presentation/widgets/product_details_body.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:laza/core/helper/spacing.dart';
+import 'package:laza/features/product_details/presentation/widgets/details_screen_header.dart';
+import 'package:laza/features/product_details/presentation/widgets/product_details_info.dart';
+import 'package:laza/core/common/widgets/custom_material_button.dart';
+import 'package:laza/features/home/domain/entities/product_entity.dart';
+
+class ProductDetailsBody extends StatelessWidget {
+  const ProductDetailsBody({super.key, required this.product});
+  final Product product;
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      child: Stack(
+        children: [
+          Column(
+            children: [
+              Hero(
+                tag: product.id ?? '',
+                child: Image.network(
+                  fit: BoxFit.fill,
+                  width: 375.w,
+                  height: 418.h,
+                  product.coverPictureUrl ?? '',
+                ),
+              ),
+              verticalSpace(15),
+              ProductDetailsInfo(product: product),
+              verticalSpace(20),
+              CustomMaterialButton(text: 'Add to Cart'),
+            ],
+          ),
+          _productDetailsHeader(),
+          
+        ],
+      ),
+    );
+  }
+
+  Widget _productDetailsHeader() {
+    return Positioned(
+      top: 40.h,
+      left: 10.w,
+      right: 10.w,
+      child: DetailsScreenHeader(productId: product.id ?? ''),
+    );
+  }
+}
+===== ./lib/features/product_details/presentation/widgets/product_details_info.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:laza/core/helper/spacing.dart';
+import 'package:laza/features/product_details/presentation/widgets/product_description.dart';
+import 'package:laza/features/product_details/presentation/widgets/product_details_header_info.dart';
+import 'package:laza/features/product_details/presentation/widgets/product_image_list.dart';
+import 'package:laza/features/product_details/presentation/widgets/size_guide_list.dart';
+import 'package:laza/features/product_details/presentation/widgets/reviews.dart';
+import 'package:laza/features/product_details/presentation/widgets/total_price.dart';
+import 'package:laza/features/home/domain/entities/product_entity.dart';
+
+class ProductDetailsInfo extends StatelessWidget {
+  const ProductDetailsInfo({super.key, required this.product});
+  final Product product;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 18.w),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          ProductDetailsHeaderInfo(product: product),
+          verticalSpace(21),
+          ProductImageList(product: product),
+          verticalSpace(15),
+          SizeGuideList(),
+          verticalSpace(15),
+          ProductDescription(product: product),
+          verticalSpace(15),
+          Reviews(product: product),
+          verticalSpace(20),
+          TotalPrice(product: product),
+        ],
+      ),
+    );
+  }
+}
+ 
+===== ./lib/features/product_details/presentation/widgets/total_price.dart =====
+import 'package:flutter/material.dart';
+import 'package:laza/core/common/app_text_styles.dart';
+import 'package:laza/features/home/domain/entities/product_entity.dart';
+
+class TotalPrice extends StatelessWidget {
+  const TotalPrice({super.key, required this.product});
+  final Product product;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text('Total Price'),
+            Text(
+              'with VAT,SD',
+              style: AppTextStyle.we400Si15ColGrey.copyWith(fontSize: 11),
+            ),
+          ],
+        ),
+        Text(
+          '\$${product.price}',
+          style: AppTextStyle.we600Si28ColText.copyWith(fontSize: 22),
+        ),
+      ],
+    );
+  }
+}
+===== ./lib/features/product_details/presentation/widgets/details_screen_header.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:laza/core/constants/assets.dart';
+import 'package:laza/di/dependency_injection.dart';
+import 'package:laza/features/cart/presentation/cubit/cart_cubit.dart';
+
+class DetailsScreenHeader extends StatelessWidget {
+  const DetailsScreenHeader({super.key, required this.productId});
+  final String productId;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: SvgPicture.asset(Assets.imagesSvgBackIcon),
+        ),
+        GestureDetector(
+          onTap: () {
+            getIt<CartCubit>().addToCart(productId, 1);
+          },
+          child: SvgPicture.asset(Assets.imagesSvgCartIcon),
+        ),
+      ],
+    );
+  }
+}
+===== ./lib/features/product_details/presentation/widgets/product_description.dart =====
+import 'package:flutter/material.dart';
+import 'package:laza/core/common/app_text_styles.dart';
+import 'package:laza/core/helper/spacing.dart';
+import 'package:laza/core/common/widgets/read_more_widget.dart';
+import 'package:laza/features/home/domain/entities/product_entity.dart';
+
+class ProductDescription extends StatelessWidget {
+  const ProductDescription({super.key, required this.product});
+  final Product product;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Description',
+          style: AppTextStyle.we600Si28ColText.copyWith(fontSize: 17),
+        ),
+        verticalSpace(10),
+        ReadMoreWidget(text: product.description ?? ''),
+      ],
+    );
+  }
+}
+===== ./lib/features/product_details/presentation/widgets/size_guide_list.dart =====
+import 'package:flutter/material.dart';
+import 'package:laza/core/common/app_text_styles.dart';
+import 'package:laza/core/constants/app_colors.dart';
+import 'package:laza/core/helper/spacing.dart';
+import 'package:laza/features/product_details/presentation/widgets/custom_text_row.dart';
+
+class SizeGuideList extends StatelessWidget {
+  const SizeGuideList({super.key});
+  
+
+  @override
+  Widget build(BuildContext context) {
+    List<String> sizes = ['S', 'M', 'L', 'XL', '2XL', '3XL'];
+    return Column(
+      children: [
+        CustomTextRow(firstText: 'Size', secondText: 'Size Guide'),
+        verticalSpace(11),
+        SizedBox(
+          height: 65,
+          child: ListView.separated(
+            scrollDirection: Axis.horizontal,
+            itemBuilder: (context, index) {
+              return Container(
+                width: 60,
+                height: 60,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: AppColors.lightGrey,
+                ),
+                child: Center(
+                  child: Text(
+                    sizes[index],
+                    style: AppTextStyle.we500Si17ColText,
+                  ),
+                ),
+              );
+            },
+            separatorBuilder: (BuildContext context, int index) {
+              return horizontalSpace(9);
+            },
+            itemCount: sizes.length,
+          ),
+        ),
+      ],
+    );
+  }
+}
+===== ./lib/features/product_details/presentation/widgets/custom_text_row.dart =====
+import 'package:flutter/material.dart';
+import 'package:laza/core/common/app_text_styles.dart';
+
+class CustomTextRow extends StatelessWidget {
+  const CustomTextRow({
+    super.key,
+    required this.firstText,
+    required this.secondText,
+    this.onTapSecondText,
+  });
+  final String firstText;
+  final String secondText;
+  final Function()? onTapSecondText;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(firstText, style: AppTextStyle.we500Si17ColText),
+        GestureDetector(
+          onTap: onTapSecondText,
+          child: Text(secondText, style: AppTextStyle.we400Si15ColGrey),
+        ),
+      ],
+    );
+  }
+}
+===== ./lib/features/product_details/presentation/widgets/reviews.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:laza/core/common/widgets/review_item.dart';
+import 'package:laza/core/helper/navigation.dart';
+import 'package:laza/core/helper/spacing.dart';
+import 'package:laza/di/dependency_injection.dart';
+import 'package:laza/features/product_details/presentation/widgets/custom_text_row.dart';
+import 'package:laza/features/home/domain/entities/product_entity.dart';
+import 'package:laza/features/reviews/presentation/cubit/review_cubit.dart';
+import 'package:laza/features/reviews/presentation/cubit/review_state.dart';
+import 'package:laza/features/reviews/presentation/screens/reviews_screen.dart';
+
+class Reviews extends StatelessWidget {
+  const Reviews({super.key, required this.product});
+  final Product product;
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider(
+      create: (context) => getIt<ReviewCubit>()..getReviews(product.id ?? ''),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          CustomTextRow(
+            firstText: 'Reviews',
+            secondText: 'See All',
+            onTapSecondText: () {
+              Navigation.push(
+                ReviewsScreen(productId: product.id ?? ''),
+                context,
+              );
+            },
+          ),
+          verticalSpace(15),
+          BlocBuilder<ReviewCubit, ReviewState>(
+            builder: (context, state) {
+              switch (state) {
+                case LoadingToLoadReviews():
+                  return const Center(child: CircularProgressIndicator());
+                case ReviewsLoaded():
+                  return state.reviewsResponse?.reviewsCount==0?
+                  Center(child: Text('No Reviews Yet'),):
+                  ReviewItem(review: state.reviewsResponse?.reviews?.items?[0]);
+                case ErrorToLoadReviews():
+                  return Center(child: Text(state.message));
+                default:
+                  return SizedBox.shrink();
+              }
+            },
+          ),
+        ],
+      ),
+    );
+  }
+}
+===== ./lib/features/product_details/presentation/widgets/product_details_header_info.dart =====
+import 'package:flutter/material.dart';
+import 'package:laza/core/common/app_text_styles.dart';
+import 'package:laza/features/home/domain/entities/product_entity.dart';
+
+class ProductDetailsHeaderInfo extends StatelessWidget {
+  const ProductDetailsHeaderInfo({super.key, required this.product});
+  final Product product;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Flexible(
+              child: Text(
+                product.name ?? '',
+                style: AppTextStyle.we600Si28ColText.copyWith(fontSize: 22),
+                overflow: TextOverflow.ellipsis,
+              ),
+            ),
+            Text(
+              '\$${product.price}',
+              style: AppTextStyle.we600Si28ColText.copyWith(fontSize: 22),
+              overflow: TextOverflow.ellipsis,
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+}
+===== ./lib/features/main/presentation/screen/main_screen.dart =====
+import 'package:flutter/material.dart';
+import 'package:laza/core/helper/shared_pref.dart';
+import 'package:laza/features/cart/presentation/screens/cart_screen.dart';
+import 'package:laza/features/home/presentation/screen/home_screen.dart';
+import 'package:laza/features/main/presentation/widgets/custom_bottom_navigation_bar.dart';
+
+class MainScreen extends StatefulWidget {
+  const MainScreen({super.key});
+
+  @override
+  State<MainScreen> createState() => _MainScreenState();
+}
+
+class _MainScreenState extends State<MainScreen> {
+  @override
+  void initState() {
+    SharedPrefHelper.setSecuredString('token',
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNjliZDhhYS1jMWE5LTRjODItNTM3NC0wOGRlMDQ4NTRkODkiLCJqdGkiOiJhYTZiZmFhMi02ZmMwLTQ3YjUtYWQxNS0wNmVkMDgyZjU5Y2UiLCJlbWFpbCI6InNhZGlvem1hbm5AZ21haWwuY29tIiwibmFtZSI6IkFiZGVscmFtYW4gQWRlbCBFenplbGRlYW4iLCJyb2xlcyI6IiIsInBpY3R1cmUiOiIiLCJleHAiOjE3NjAwNDE3MDksImlzcyI6ImVzaG9wLm5ldCIsImF1ZCI6ImVzaG9wLm5ldCJ9.ILGhXkaFB17meH1HKXB5t8ulZT4nQoa4qPdeShfpooE');
+    super.initState();
+  }
+
+  int currentIndex = 0;
+
+  final screens = [
+    HomeScreen(),
+    const Placeholder(),
+    const CartScreen(),
+    const Placeholder(),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: screens[currentIndex],
+      bottomNavigationBar: CustomBottomNavigationBar(
+        currentIndex: currentIndex,
+        onTap: (index) => setState(() => currentIndex = index),
+      ),
+    );
+  }
+}
+===== ./lib/features/main/presentation/widgets/custom_bottom_navigation_bar.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:laza/core/common/app_text_styles.dart';
+import 'package:laza/core/constants/assets.dart';
+
+class CustomBottomNavigationBar extends StatelessWidget {
+  final int currentIndex;
+  final ValueChanged<int> onTap;
+
+  const CustomBottomNavigationBar({
+    required this.currentIndex,
+    required this.onTap,
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return BottomNavigationBar(
+      type: BottomNavigationBarType.shifting,
+      currentIndex: currentIndex,
+      onTap: onTap,
+      items: [
+        BottomNavigationBarItem(
+          icon: currentIndex == 0
+              ? Text('Home', style: AppTextStyle.we500Si11ColPrimary)
+              : SvgPicture.asset(Assets.imagesSvgHome),
+          label: currentIndex == 0 ? '' : 'Home',
+        ),
+        BottomNavigationBarItem(
+          icon: currentIndex == 1
+              ? Text('Wishlist', style: AppTextStyle.we500Si11ColPrimary)
+              : SvgPicture.asset(Assets.imagesSvgWishlist),
+          label: currentIndex == 1 ? '' : 'Wishlist',
+        ),
+        BottomNavigationBarItem(
+          icon: currentIndex == 2
+              ? Text('Cart', style: AppTextStyle.we500Si11ColPrimary)
+              : SvgPicture.asset(Assets.imagesSvgCart),
+          label: currentIndex == 2 ? '' : 'Cart',
+        ),
+        BottomNavigationBarItem(
+          icon: currentIndex == 3
+              ? Text('Wallet', style: AppTextStyle.we500Si11ColPrimary)
+              : SvgPicture.asset(Assets.imagesSvgWallet),
+          label: currentIndex == 3 ? '' : 'Wallet',
+        ),
+      ],
+    );
+  }
+}===== ./lib/features/login/data/datasources/login_api_service.g.dart =====
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'login_api_service.dart';
+
+// dart format off
+
+// **************************************************************************
+// RetrofitGenerator
+// **************************************************************************
+
+// ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers,unused_element,unnecessary_string_interpolations,unused_element_parameter
+
+class _LoginApiService implements LoginApiService {
+  _LoginApiService(this._dio, {this.baseUrl, this.errorLogger}) {
+    baseUrl ??= 'https://accessories-eshop.runasp.net/';
+  }
+
+  final Dio _dio;
+
+  String? baseUrl;
+
+  final ParseErrorLogger? errorLogger;
+
+  @override
+  Future<LoginResponseModel> login(LoginRequestModel request) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = <String, dynamic>{};
+    _data.addAll(request.toJson());
+    final _options = _setStreamType<LoginResponseModel>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            'api/auth/login',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late LoginResponseModel _value;
+    try {
+      _value = LoginResponseModel.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
+  }
+
+  RequestOptions _setStreamType<T>(RequestOptions requestOptions) {
+    if (T != dynamic &&
+        !(requestOptions.responseType == ResponseType.bytes ||
+            requestOptions.responseType == ResponseType.stream)) {
+      if (T == String) {
+        requestOptions.responseType = ResponseType.plain;
+      } else {
+        requestOptions.responseType = ResponseType.json;
+      }
+    }
+    return requestOptions;
+  }
+
+  String _combineBaseUrls(String dioBaseUrl, String? baseUrl) {
+    if (baseUrl == null || baseUrl.trim().isEmpty) {
+      return dioBaseUrl;
+    }
+
+    final url = Uri.parse(baseUrl);
+
+    if (url.isAbsolute) {
+      return url.toString();
+    }
+
+    return Uri.parse(dioBaseUrl).resolveUri(url).toString();
+  }
+}
+
+// dart format on
+===== ./lib/features/login/data/datasources/login_api_service.dart =====
+import 'package:dio/dio.dart';
+import 'package:laza/api/api_constant.dart';
+import 'package:retrofit/retrofit.dart';
+import '../models/login_request_model.dart';
+import '../models/login_response_model.dart';
+
+part 'login_api_service.g.dart';
+
+@RestApi(baseUrl:ApiConstant.baseUrl)
+abstract class LoginApiService {
+  factory LoginApiService(Dio dio) = _LoginApiService;
+
+  @POST('api/auth/login')
+  Future<LoginResponseModel> login(@Body() LoginRequestModel request);
+}
+===== ./lib/features/login/data/repositories/login_repository_impl.dart =====
+import 'package:dio/dio.dart';
+import 'package:laza/core/errors/exceptions.dart';
+import 'package:laza/core/errors/handle_exception.dart';
+import 'package:laza/features/login/data/datasources/login_api_service.dart';
+import 'package:laza/features/login/data/models/login_request_model.dart';
+import 'package:laza/features/login/data/models/login_response_model.dart';
+import 'package:laza/features/login/domain/repositories/login_repository.dart';
+
+class LoginRepositoryImpl implements LoginRepository {
+  final LoginApiService _loginApiService;
+
+  LoginRepositoryImpl(this._loginApiService);
+
+  @override
+  Future<LoginResponseModel> login(LoginRequestModel request) async {
+    try {
+      final response = await _loginApiService.login(request);
+      return response;
+    } on DioException catch (e) {
+      HandleException.handle(e);
+      rethrow;
+    } catch (e) {
+      throw ServerException(
+        message: 'Unexpected error occurred',
+        statusCode: 500,
+      );
+    }
+  }
+}
+===== ./lib/features/login/data/models/login_request_model.g.dart =====
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'login_request_model.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+LoginRequestModel _$LoginRequestModelFromJson(Map<String, dynamic> json) =>
+    LoginRequestModel(
+      email: json['email'] as String,
+      password: json['password'] as String,
+    );
+
+Map<String, dynamic> _$LoginRequestModelToJson(LoginRequestModel instance) =>
+    <String, dynamic>{'email': instance.email, 'password': instance.password};
+===== ./lib/features/login/data/models/login_response_model.g.dart =====
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'login_response_model.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+LoginResponseModel _$LoginResponseModelFromJson(Map<String, dynamic> json) =>
+    LoginResponseModel(
+      token: json['accessToken'] as String,
+      expiresAtUtc: json['expiresAtUtc'] as String,
+      refreshToken: json['refreshToken'] as String,
+    );
+
+Map<String, dynamic> _$LoginResponseModelToJson(LoginResponseModel instance) =>
+    <String, dynamic>{
+      'accessToken': instance.token,
+      'expiresAtUtc': instance.expiresAtUtc,
+      'refreshToken': instance.refreshToken,
+    };
+===== ./lib/features/login/data/models/login_response_model.dart =====
+import 'package:json_annotation/json_annotation.dart';
+
+part 'login_response_model.g.dart';
+
+@JsonSerializable()
+class LoginResponseModel {
+  @JsonKey(name: 'accessToken')
+  final String token;
+  
+  @JsonKey(name: 'expiresAtUtc')
+  final String expiresAtUtc;
+  
+  @JsonKey(name: 'refreshToken')
+  final String refreshToken;
+
+  const LoginResponseModel({
+    required this.token,
+    required this.expiresAtUtc,
+    required this.refreshToken,
+  });
+
+  factory LoginResponseModel.fromJson(Map<String, dynamic> json) =>
+      _$LoginResponseModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$LoginResponseModelToJson(this);
+}
+===== ./lib/features/login/data/models/login_request_model.dart =====
+import 'package:json_annotation/json_annotation.dart';
+
+part 'login_request_model.g.dart';
+
+@JsonSerializable()
+class LoginRequestModel {
+  final String email;
+  final String password;
+
+  const LoginRequestModel({
+    required this.email,
+    required this.password,
+  });
+
+  factory LoginRequestModel.fromJson(Map<String, dynamic> json) =>
+      _$LoginRequestModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$LoginRequestModelToJson(this);
+}
+===== ./lib/features/login/domain/repositories/login_repository.dart =====
+import 'package:laza/features/login/data/models/login_request_model.dart';
+import 'package:laza/features/login/data/models/login_response_model.dart';
+
+abstract class LoginRepository {
+  Future<LoginResponseModel> login(LoginRequestModel request);
+}
+===== ./lib/features/login/domain/entities/user_entity.dart =====
+class UserEntity {
+  final String id;
+  final String email;
+  final String name;
+  final String token;
+  final String refreshToken;
+  final DateTime refreshTokenExpiryTime;
+
+  UserEntity({
+    required this.id,
+    required this.email,
+    required this.name,
+    required this.token,
+    required this.refreshToken,
+    required this.refreshTokenExpiryTime,
+  });
+}
+===== ./lib/features/login/presentation/cubit/login_cubit.dart =====
+import 'package:bloc/bloc.dart';
+import 'package:flutter/widgets.dart';
+import 'package:laza/core/errors/server_exception.dart';
+import 'package:laza/features/login/data/models/login_request_model.dart';
+import 'package:laza/features/login/data/models/login_response_model.dart';
+import 'package:laza/features/login/domain/repositories/login_repository.dart';
+
+part 'login_state.dart';
+
+class LoginCubit extends Cubit<LoginState> {
+  LoginCubit(this._login) : super(LoginInitial());
+  final LoginRepository _login;
+
+  Future<void> login(LoginRequestModel loginModel) async {
+    emit(LoadingToLogin());
+    try {
+      final response = await _login.login(loginModel);
+      emit(LoginSuccess(loginResponse: response));
+    } on ServerException catch (e) {
+      emit(LoginFailure(errors: e.errorModel.getReadableMessage()));
+    }
+  }
+}
+===== ./lib/features/login/presentation/cubit/login_state.dart =====
+part of 'login_cubit.dart';
+
+@immutable
+sealed class LoginState {}
+
+final class LoginInitial extends LoginState {}
+
+final class LoginSuccess extends LoginState {
+  final LoginResponseModel loginResponse;
+
+  LoginSuccess({required this.loginResponse});
+}
+
+final class LoginFailure extends LoginState {
+  final String errors;
+
+  LoginFailure({required this.errors});
+}
+
+final class LoadingToLogin extends LoginState {}
+===== ./lib/features/login/presentation/screen/login_screen.dart =====
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
+
+import 'package:laza/core/common/app_text_styles.dart';
+import 'package:laza/core/common/widgets/custom_material_button.dart';
+import 'package:laza/core/constants/app_colors.dart';
+import 'package:laza/core/constants/assets.dart';
+import 'package:laza/core/helper/navigation.dart';
+import 'package:laza/core/helper/shared_pref.dart';
+import 'package:laza/core/helper/spacing.dart';
+import 'package:laza/di/dependency_injection.dart';
+import 'package:laza/features/home/presentation/screen/home_screen.dart';
+import 'package:laza/features/login/data/models/login_request_model.dart';
+import 'package:laza/features/login/presentation/cubit/login_cubit.dart';
+
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider<LoginCubit>(
+      create: (context) => getIt(),
+      child: Scaffold(
+        bottomNavigationBar: CustomMaterialButton(
+          text: 'Login',
+          onPressed: () => getIt<LoginCubit>().login(
+            LoginRequestModel(email: 'Abdelrahman Ade', password: '123123'),
+          ),
+        ),
+        body: LoginScreenBody(),
+      ),
+    );
+  }
+}
+
+class LoginScreenBody extends StatelessWidget {
+  const LoginScreenBody({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      child: SafeArea(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20.w),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SvgPicture.asset(Assets.imagesSvgBackIcon),
+              LoginHeader(),
+              verticalSpace(164),
+              LoginFormFields(),
+              verticalSpace(30),
+              LoginForgetPassword(),
+              verticalSpace(40),
+              LoginRememberMe(),
+              verticalSpace(107),
+              TermAndCondition(),
+              LoginBlocListener(),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class LoginBlocListener extends StatelessWidget {
+  const LoginBlocListener({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocListener<LoginCubit, LoginState>(
+      listenWhen: (previous, current) {
+        return current is LoginSuccess ||
+            current is LoginFailure ||
+            current is LoadingToLogin;
+      },
+      listener: (context, state) {
+        switch (state) {
+          case LoginSuccess():
+            SharedPrefHelper.setSecuredString(
+              'token',
+              state.loginResponse.token,
+            );
+            Navigation.pop(context);
+            Navigation.push(HomeScreen(), context);
+          case LoginFailure():
+            Navigation.pop(context);
+            _errorState(state.errors, context);
+
+          case LoadingToLogin():
+            showDialog(
+              context: context,
+              builder: (builder) {
+                return const Center(child: CircularProgressIndicator());
+              },
+            );
+          default:
+            SizedBox.shrink();
+        }
+      },
+      child: SizedBox.shrink(),
+    );
+  }
+
+  Future<dynamic> _errorState(String error, BuildContext context) {
+    return showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        icon: const Icon(Icons.error, color: Colors.red, size: 32),
+        content: Text(error, style: AppTextStyle.we500Si17ColText),
+        actions: [
+          TextButton(
+            onPressed: () {
+              Navigation.pop(context);
+            },
+            child: Text('Got it', style: AppTextStyle.we600Si28ColText),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class TermAndCondition extends StatelessWidget {
+  const TermAndCondition({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return RichText(
+      textAlign: TextAlign.center,
+      text: TextSpan(
+        children: [
+          TextSpan(
+            text: 'By connecting your account confirm that you agree with our ',
+            style: AppTextStyle.we400Si15ColGrey.copyWith(fontSize: 13),
+          ),
+          TextSpan(
+            text: 'Term and Condition',
+            style: AppTextStyle.we500Si13CollightGrey.copyWith(
+              color: AppColors.secondaryTextColor,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class LoginRememberMe extends StatefulWidget {
+  const LoginRememberMe({super.key});
+
+  @override
+  State<LoginRememberMe> createState() => _LoginRememberMeState();
+}
+
+class _LoginRememberMeState extends State<LoginRememberMe> {
+  bool rememberMe = true;
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          'Remember me',
+          style: AppTextStyle.we400Si15ColGrey.copyWith(
+            color: AppColors.textColor,
+          ),
+        ),
+        Switch(
+          activeColor: Colors.white,
+          activeTrackColor: Color(0xff34C759),
+          inactiveTrackColor: AppColors.lightGrey,
+
+          value: rememberMe,
+          onChanged: (_) {
+            setState(() {
+              rememberMe = !rememberMe;
+            });
+          },
+        ),
+      ],
+    );
+  }
+}
+
+class LoginForgetPassword extends StatelessWidget {
+  const LoginForgetPassword({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Align(
+      alignment: Alignment.centerRight,
+      child: Text(
+        'Forgot password?',
+        style: AppTextStyle.we400Si15ColGrey.copyWith(
+          color: AppColors.secondaryColor,
+        ),
+      ),
+    );
+  }
+}
+
+class LoginFormFields extends StatelessWidget {
+  const LoginFormFields({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        LoginTextFormFiled(hintText: 'Username', labelText: 'Username'),
+        verticalSpace(25),
+        LoginTextFormFiled(hintText: 'Password', labelText: 'Password'),
+      ],
+    );
+  }
+}
+
+class LoginTextFormFiled extends StatelessWidget {
+  const LoginTextFormFiled({
+    super.key,
+    required this.hintText,
+    required this.labelText,
+  });
+  final String hintText;
+  final String labelText;
+
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      decoration: InputDecoration(hintText: hintText, labelText: labelText),
+    );
+  }
+}
+
+class LoginHeader extends StatelessWidget {
+  const LoginHeader({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        children: [
+          Text('Welcome', style: AppTextStyle.we600Si28ColText),
+          verticalSpace(5),
+          Text(
+            'Please enter your data to continue',
+            style: AppTextStyle.we400Si15ColGrey,
+          ),
+        ],
+      ),
+    );
+  }
+}
+===== ./lib/features/reviews/data/datasources/review_api_service.g.dart =====
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'review_api_service.dart';
+
+// dart format off
+
+// **************************************************************************
+// RetrofitGenerator
+// **************************************************************************
+
+// ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers,unused_element,unnecessary_string_interpolations,unused_element_parameter
+
+class _ReviewApiService implements ReviewApiService {
+  _ReviewApiService(this._dio, {this.baseUrl, this.errorLogger}) {
+    baseUrl ??= 'https://accessories-eshop.runasp.net/';
+  }
+
+  final Dio _dio;
+
+  String? baseUrl;
+
+  final ParseErrorLogger? errorLogger;
+
+  @override
+  Future<ReviewsResponseModel> getReviews(String productId) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    const Map<String, dynamic>? _data = null;
+    final _options = _setStreamType<ReviewsResponseModel>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            'api/reviews/${productId}',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late ReviewsResponseModel _value;
+    try {
+      _value = ReviewsResponseModel.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
+  }
+
+  RequestOptions _setStreamType<T>(RequestOptions requestOptions) {
+    if (T != dynamic &&
+        !(requestOptions.responseType == ResponseType.bytes ||
+            requestOptions.responseType == ResponseType.stream)) {
+      if (T == String) {
+        requestOptions.responseType = ResponseType.plain;
+      } else {
+        requestOptions.responseType = ResponseType.json;
+      }
+    }
+    return requestOptions;
+  }
+
+  String _combineBaseUrls(String dioBaseUrl, String? baseUrl) {
+    if (baseUrl == null || baseUrl.trim().isEmpty) {
+      return dioBaseUrl;
+    }
+
+    final url = Uri.parse(baseUrl);
+
+    if (url.isAbsolute) {
+      return url.toString();
+    }
+
+    return Uri.parse(dioBaseUrl).resolveUri(url).toString();
+  }
+}
+
+// dart format on
+===== ./lib/features/reviews/data/datasources/review_api_service.dart =====
+import 'package:dio/dio.dart';
+import 'package:laza/api/api_constant.dart';
+import 'package:laza/features/reviews/data/models/review_model.dart';
+import 'package:retrofit/retrofit.dart';
+
+part 'review_api_service.g.dart';
+
+@RestApi(baseUrl: ApiConstant.baseUrl)
+abstract class ReviewApiService {
+  factory ReviewApiService(Dio dio) = _ReviewApiService;
+
+  @GET('${ApiConstant.reviewsEndPoint}/{productId}')
+  Future<ReviewsResponseModel> getReviews(@Path('productId') String productId);
+}
+===== ./lib/features/reviews/data/mapper/review_mapper.dart =====
+import 'package:laza/features/reviews/data/models/review_model.dart';
+import 'package:laza/features/reviews/domain/entities/review_entity.dart';
+
+class ReviewMapper {
+  static ReviewsResponse toEntity(ReviewsResponseModel? response) {
+    if (response == null) {
+      return ReviewsResponse(
+        message: null,
+        averageRating: null,
+        reviewsCount: null,
+        reviews: null,
+      );
+    }
+
+    return ReviewsResponse(
+      message: response.message,
+      averageRating: response.averageRating,
+      reviewsCount: response.reviewsCount,
+      reviews: response.reviews != null
+          ? ReviewsData(
+              items: response.reviews!.items
+                      ?.map((item) => Review(
+                            comment: item.comment,
+                            rating: item.rating,
+                            createdAt: item.createdAt,
+                            userName: item.userName,
+                            userPicture: item.userPicture,
+                          ))
+                      .toList() ??
+                  [],
+              page: response.reviews!.page,
+              pageSize: response.reviews!.pageSize,
+              totalCount: response.reviews!.totalCount,
+              hasNextPage: response.reviews!.hasNextPage,
+              hasPreviousPage: response.reviews!.hasPreviousPage,
+            )
+          : null,
+    );
+  }
+}
+===== ./lib/features/reviews/data/repositories/review_repository_impl.dart =====
+import 'package:dio/dio.dart';
+import 'package:laza/core/errors/handle_exception.dart';
+import 'package:laza/features/reviews/data/datasources/review_api_service.dart';
+import 'package:laza/features/reviews/data/mapper/review_mapper.dart';
+import 'package:laza/features/reviews/domain/entities/review_entity.dart';
+import 'package:laza/features/reviews/domain/repositories/review_repository.dart';
+
+class ReviewRepositoryImpl implements ReviewRepository {
+  final ReviewApiService apiService;
+
+  ReviewRepositoryImpl({required this.apiService});
+
+  @override
+  Future<ReviewsResponse>? getReviews(String productId) async {
+    try {
+      final response = await apiService.getReviews(productId);
+      return ReviewMapper.toEntity(response);
+    } on DioException catch (error) {
+      HandleException.handle(error);
+      rethrow;
+    }
+  }
+}
+===== ./lib/features/reviews/data/models/review_model.g.dart =====
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'review_model.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+ReviewModel _$ReviewModelFromJson(Map<String, dynamic> json) => ReviewModel(
+  comment: json['comment'] as String?,
+  rating: (json['rating'] as num?)?.toInt(),
+  createdAt: json['createdAt'] as String?,
+  userName: json['userName'] as String?,
+  userPicture: json['userPicture'] as String?,
+);
+
+Map<String, dynamic> _$ReviewModelToJson(ReviewModel instance) =>
+    <String, dynamic>{
+      'comment': instance.comment,
+      'rating': instance.rating,
+      'createdAt': instance.createdAt,
+      'userName': instance.userName,
+      'userPicture': instance.userPicture,
+    };
+
+ReviewsDataModel _$ReviewsDataModelFromJson(Map<String, dynamic> json) =>
+    ReviewsDataModel(
+      items: (json['items'] as List<dynamic>?)
+          ?.map((e) => ReviewModel.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      page: (json['page'] as num?)?.toInt(),
+      pageSize: (json['pageSize'] as num?)?.toInt(),
+      totalCount: (json['totalCount'] as num?)?.toInt(),
+      hasNextPage: json['hasNextPage'] as bool?,
+      hasPreviousPage: json['hasPreviousPage'] as bool?,
+    );
+
+Map<String, dynamic> _$ReviewsDataModelToJson(ReviewsDataModel instance) =>
+    <String, dynamic>{
+      'items': instance.items,
+      'page': instance.page,
+      'pageSize': instance.pageSize,
+      'totalCount': instance.totalCount,
+      'hasNextPage': instance.hasNextPage,
+      'hasPreviousPage': instance.hasPreviousPage,
+    };
+
+ReviewsResponseModel _$ReviewsResponseModelFromJson(
+  Map<String, dynamic> json,
+) => ReviewsResponseModel(
+  message: json['message'] as String?,
+  averageRating: (json['averageRating'] as num?)?.toDouble(),
+  reviewsCount: (json['reviewsCount'] as num?)?.toInt(),
+  reviews: json['reviews'] == null
+      ? null
+      : ReviewsDataModel.fromJson(json['reviews'] as Map<String, dynamic>),
+);
+
+Map<String, dynamic> _$ReviewsResponseModelToJson(
+  ReviewsResponseModel instance,
+) => <String, dynamic>{
+  'message': instance.message,
+  'averageRating': instance.averageRating,
+  'reviewsCount': instance.reviewsCount,
+  'reviews': instance.reviews,
+};
+===== ./lib/features/reviews/data/models/review_model.dart =====
+import 'package:json_annotation/json_annotation.dart';
+
+part 'review_model.g.dart';
+
+@JsonSerializable()
+class ReviewModel {
+  String? comment;
+  int? rating;
+  String? createdAt;
+  String? userName;
+  String? userPicture;
+
+  ReviewModel({
+    this.comment,
+    this.rating,
+    this.createdAt,
+    this.userName,
+    this.userPicture,
+  });
+
+  factory ReviewModel.fromJson(Map<String, dynamic> json) =>
+      _$ReviewModelFromJson(json);
+}
+
+@JsonSerializable()
+class ReviewsDataModel {
+  List<ReviewModel>? items;
+  int? page;
+  int? pageSize;
+  int? totalCount;
+  bool? hasNextPage;
+  bool? hasPreviousPage;
+
+  ReviewsDataModel({
+    this.items,
+    this.page,
+    this.pageSize,
+    this.totalCount,
+    this.hasNextPage,
+    this.hasPreviousPage,
+  });
+
+  factory ReviewsDataModel.fromJson(Map<String, dynamic> json) =>
+      _$ReviewsDataModelFromJson(json);
+}
+
+@JsonSerializable()
+class ReviewsResponseModel {
+  String? message;
+  double? averageRating;
+  int? reviewsCount;
+  ReviewsDataModel? reviews;
+
+  ReviewsResponseModel({
+    this.message,
+    this.averageRating,
+    this.reviewsCount,
+    this.reviews,
+  });
+
+  factory ReviewsResponseModel.fromJson(Map<String, dynamic> json) =>
+      _$ReviewsResponseModelFromJson(json);
+}
+===== ./lib/features/reviews/domain/repositories/review_repository.dart =====
+import 'package:laza/features/reviews/domain/entities/review_entity.dart';
+
+abstract interface class ReviewRepository {
+  Future<ReviewsResponse>? getReviews(String productId);
+}
+===== ./lib/features/reviews/domain/entities/review_entity.dart =====
+class Review {
+  final String? comment;
+  final int? rating;
+  final String? createdAt;
+  final String? userName;
+  final String? userPicture;
+
+  Review({
+    required this.comment,
+    required this.rating,
+    required this.createdAt,
+    required this.userName,
+    required this.userPicture,
+  });
+}
+
+class ReviewsData {
+  final List<Review>? items;
+  final int? page;
+  final int? pageSize;
+  final int? totalCount;
+  final bool? hasNextPage;
+  final bool? hasPreviousPage;
+
+  ReviewsData({
+    required this.items,
+    required this.page,
+    required this.pageSize,
+    required this.totalCount,
+    required this.hasNextPage,
+    required this.hasPreviousPage,
+  });
+}
+
+class ReviewsResponse {
+  final String? message;
+  final double? averageRating;
+  final int? reviewsCount;
+  final ReviewsData? reviews;
+
+  ReviewsResponse({
+    required this.message,
+    required this.averageRating,
+    required this.reviewsCount,
+    required this.reviews,
+  });
+}
+===== ./lib/features/reviews/presentation/cubit/review_cubit.dart =====
+import 'package:bloc/bloc.dart';
+import 'package:laza/core/errors/server_exception.dart';
+import 'package:laza/features/reviews/domain/repositories/review_repository.dart';
+import 'package:laza/features/reviews/presentation/cubit/review_state.dart';
+
+class ReviewCubit extends Cubit<ReviewState> {
+  ReviewCubit(this.reviewRepository) : super(ReviewInitial());
+  final ReviewRepository reviewRepository;
+
+  Future<void> getReviews(String productId) async {
+    emit(LoadingToLoadReviews());
+    try {
+      final reviewsResponse = await reviewRepository.getReviews(productId);
+
+      emit(ReviewsLoaded(reviewsResponse: reviewsResponse));
+    } on ServerException catch (errors) {
+      emit(ErrorToLoadReviews(message: errors.errorModel.getReadableMessage()));
+    } catch (error) {
+      emit(ErrorToLoadReviews(message: "SomeThing Wen't Wrong"));
+    }
+  }
+}
+===== ./lib/features/reviews/presentation/cubit/review_state.dart =====
+import 'package:laza/features/reviews/domain/entities/review_entity.dart';
+
+sealed class ReviewState {}
+
+final class ReviewInitial extends ReviewState {}
+
+final class LoadingToLoadReviews extends ReviewState {}
+
+final class ReviewsLoaded extends ReviewState {
+  final ReviewsResponse? reviewsResponse;
+
+  ReviewsLoaded({required this.reviewsResponse});
+}
+
+final class ErrorToLoadReviews extends ReviewState {
+  final String message;
+
+  ErrorToLoadReviews({required this.message});
+}
+===== ./lib/features/reviews/presentation/screens/reviews_screen.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:laza/core/common/app_text_styles.dart';
+import 'package:laza/di/dependency_injection.dart';
+import 'package:laza/features/reviews/presentation/cubit/review_cubit.dart';
+import 'package:laza/features/reviews/presentation/cubit/review_state.dart';
+import 'package:laza/features/reviews/presentation/widgets/review_screen_body.dart';
+
+class ReviewsScreen extends StatelessWidget {
+  const ReviewsScreen({super.key, required this.productId});
+  final String productId;
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider(
+      create: (_) => getIt<ReviewCubit>()..getReviews(productId),
+      child: Scaffold(
+        body: BlocBuilder<ReviewCubit, ReviewState>(
+          buildWhen: (previous, current) =>
+              current is LoadingToLoadReviews ||
+              current is ReviewsLoaded ||
+              current is ErrorToLoadReviews,
+
+          builder: (context, state) {
+            switch (state) {
+              case LoadingToLoadReviews():
+                return const Center(child: CircularProgressIndicator());
+              case ReviewsLoaded():
+                return ReviewScreenBody(
+                  review: state.reviewsResponse,
+                  productId: productId,
+                );
+              case ErrorToLoadReviews():
+                return Center(
+                  child: Text(
+                    state.message,
+                    style: AppTextStyle.we600Si28ColText,
+                  ),
+                );
+
+              default:
+                return SizedBox.shrink();
+            }
+          },
+        ),
+      ),
+    );
+  }
+}
+===== ./lib/features/reviews/presentation/widgets/review_list.dart =====
+import 'package:flutter/material.dart';
+import 'package:laza/core/common/app_text_styles.dart';
+import 'package:laza/core/common/widgets/review_item.dart';
+import 'package:laza/features/reviews/domain/entities/review_entity.dart';
+
+class ReviewList extends StatelessWidget {
+  const ReviewList({super.key, required this.reviews});
+  final List<Review>? reviews;
+
+  @override
+  Widget build(BuildContext context) {
+    if (reviews?.isEmpty ?? true) {
+      return Center(child: Text('There is No Review yet',style: AppTextStyle.we600Si28ColText,),);
+      
+    }
+    return ListView.builder(
+      shrinkWrap: true,
+      itemCount: reviews?.length,
+
+      itemBuilder: (context, index) {
+        return ReviewItem(review: reviews?[index]);
+      },
+    );
+  }
+}
+===== ./lib/features/reviews/presentation/widgets/review_screen_body.dart =====
+import 'package:flutter/material.dart';
+
+import 'package:laza/core/helper/spacing.dart';
+import 'package:laza/features/reviews/domain/entities/review_entity.dart';
+import 'package:laza/features/reviews/presentation/widgets/review_details.dart';
+import 'package:laza/features/reviews/presentation/widgets/review_header.dart';
+import 'package:laza/features/reviews/presentation/widgets/review_list.dart';
+
+class ReviewScreenBody extends StatelessWidget {
+  const ReviewScreenBody({super.key, this.review, required this.productId});
+  final ReviewsResponse? review;
+  final String productId;
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      child: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: Column(
+            children: [
+              ReviewHeader(),
+              verticalSpace(38),
+              if (review?.reviewsCount == 0) Center(child: Text('No Review')),
+              ReviewDetails(review: review, productId: productId),
+
+              SizedBox(height: 30),
+              ReviewList(reviews: review?.reviews?.items),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+===== ./lib/features/reviews/presentation/widgets/review_details.dart =====
+import 'package:flutter/material.dart';
+import 'package:laza/core/common/app_text_styles.dart';
+import 'package:laza/core/constants/app_colors.dart';
+import 'package:laza/core/helper/navigation.dart';
+import 'package:laza/core/helper/spacing.dart';
+import 'package:laza/features/add_review/presentation/screens/add_review_screen.dart';
+import 'package:laza/features/reviews/domain/entities/review_entity.dart';
+
+class ReviewDetails extends StatelessWidget {
+  const ReviewDetails({super.key, this.review, required this.productId});
+  final ReviewsResponse? review;
+  final String productId;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              '${review?.reviews?.totalCount}'
+              ' Reviews',
+              style: AppTextStyle.we500Si17ColText,
+            ),
+            Text(review?.averageRating?.floor().toString() ?? ''),
+          ],
+        ),
+        MaterialButton(
+          minWidth: 114,
+          height: 36,
+
+          color: AppColors.secondaryColor,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
+
+          onPressed: () {
+            Navigation.push(AddReviewScreen(productId: productId), context);
+          },
+          child: Row(
+            children: [
+              Icon(Icons.edit, color: Colors.white),
+              horizontalSpace(5),
+
+              Text('Add Review', style: AppTextStyle.we500Si13CollightGrey),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+}
+===== ./lib/features/reviews/presentation/widgets/review_header.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:laza/core/common/app_text_styles.dart';
+import 'package:laza/core/constants/assets.dart';
+import 'package:laza/core/helper/navigation.dart';
+import 'package:laza/core/helper/spacing.dart';
+
+class ReviewHeader extends StatelessWidget {
+  const ReviewHeader({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        GestureDetector(
+          onTap: () {
+            Navigation.pop(context);
+          },
+          child: SvgPicture.asset(Assets.imagesSvgBackIcon),
+        ),
+        horizontalSpace(92),
+        Text('Review', style: AppTextStyle.we600Si28ColText),
+      ],
+    );
+  }
+}
+===== ./lib/main.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:laza/core/helper/shared_pref.dart';
+import 'package:laza/di/dependency_injection.dart';
+import 'package:laza/features/login/presentation/screen/login_screen.dart';
+import 'package:laza/features/main/presentation/screen/main_screen.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await setup();
+
+  await SharedPrefHelper.init();
+  runApp(LazaApp());
+}
+
+class LazaApp extends StatelessWidget {
+  const LazaApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ScreenUtilInit(
+      designSize: const Size(375, 812),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      child: FutureBuilder(
+        future: _checkLogin(),
+        builder: (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            home: snapshot.data ? MainScreen() : LoginScreen(),
+          );
+        },
+      ),
+    );
+  }
+
+  Future<bool> _checkLogin() async {
+    final token = await SharedPrefHelper.getSecuredString('token');
+    return token != '';
+  }
+}
+===== ./lib/api/api_constant.dart =====
+class ApiConstant {
+  static const String baseUrl = "https://accessories-eshop.runasp.net/";
+  static const String productEndPoint = "api/products";
+  static const String categoryEndPoint = "api/categories";
+  static const String reviewsEndPoint = "api/reviews";
+  static const String loginEndPoint = "api/auth/login";
+}
+class ErrorKeys{
+  static const String type = "type";
+  static const String title = "title";
+  static const String status = "status";
+  static const String detail = "detail";
+  static const String instance = "instance";
+}===== ./analysis_options.yaml =====
+# This file configures the analyzer, which statically analyzes Dart code to
+# check for errors, warnings, and lints.
+#
+# The issues identified by the analyzer are surfaced in the UI of Dart-enabled
+# IDEs (https://dart.dev/tools#ides-and-editors). The analyzer can also be
+# invoked from the command line by running `flutter analyze`.
+
+# The following line activates a set of recommended lints for Flutter apps,
+# packages, and plugins designed to encourage good coding practices.
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  # The lint rules applied to this project can be customized in the
+  # section below to disable rules from the `package:flutter_lints/flutter.yaml`
+  # included above or to enable additional rules. A list of all available lints
+  # and their documentation is published at https://dart.dev/lints.
+  #
+  # Instead of disabling a lint rule for the entire project in the
+  # section below, it can also be suppressed for a single line of code
+  # or a specific dart file by using the `// ignore: name_of_lint` and
+  # `// ignore_for_file: name_of_lint` syntax on the line or in the file
+  # producing the lint.
+  rules:
+    # avoid_print: false  # Uncomment to disable the `avoid_print` rule
+    # prefer_single_quotes: true  # Uncomment to enable the `prefer_single_quotes` rule
+
+# Additional information about this file can be found at
+# https://dart.dev/guides/language/analysis-options
+===== ./flutter_native_splash.yaml =====
+flutter_native_splash:
+  image: assets/images/png/splashScreen.png
+  color: "#9775FA"
+  ios: true===== ./.vscode/settings.json =====
+{
+    "files.exclude": {
+        "**/*.freezed.dart": true,
+        "**/*.g.dart": true
+    },
+    "cSpell.words": [
+        "laza"
+    ]
+}===== ./.idea/runConfigurations/main_dart.xml =====
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
+    <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
+    <method />
+  </configuration>
+</component>===== ./.idea/libraries/Dart_SDK.xml =====
+<component name="libraryTable">
+  <library name="Dart SDK">
+    <CLASSES>
+      <root url="file:///Users/abdelrahmanadel/Development/flutter/bin/cache/dart-sdk/lib/async" />
+      <root url="file:///Users/abdelrahmanadel/Development/flutter/bin/cache/dart-sdk/lib/collection" />
+      <root url="file:///Users/abdelrahmanadel/Development/flutter/bin/cache/dart-sdk/lib/convert" />
+      <root url="file:///Users/abdelrahmanadel/Development/flutter/bin/cache/dart-sdk/lib/core" />
+      <root url="file:///Users/abdelrahmanadel/Development/flutter/bin/cache/dart-sdk/lib/developer" />
+      <root url="file:///Users/abdelrahmanadel/Development/flutter/bin/cache/dart-sdk/lib/html" />
+      <root url="file:///Users/abdelrahmanadel/Development/flutter/bin/cache/dart-sdk/lib/io" />
+      <root url="file:///Users/abdelrahmanadel/Development/flutter/bin/cache/dart-sdk/lib/isolate" />
+      <root url="file:///Users/abdelrahmanadel/Development/flutter/bin/cache/dart-sdk/lib/math" />
+      <root url="file:///Users/abdelrahmanadel/Development/flutter/bin/cache/dart-sdk/lib/mirrors" />
+      <root url="file:///Users/abdelrahmanadel/Development/flutter/bin/cache/dart-sdk/lib/typed_data" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>===== ./.idea/libraries/KotlinJavaRuntime.xml =====
+<component name="libraryTable">
+  <library name="KotlinJavaRuntime">
+    <CLASSES>
+      <root url="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib.jar!/" />
+      <root url="jar://$KOTLIN_BUNDLED$/lib/kotlin-reflect.jar!/" />
+      <root url="jar://$KOTLIN_BUNDLED$/lib/kotlin-test.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/" />
+      <root url="jar://$KOTLIN_BUNDLED$/lib/kotlin-reflect-sources.jar!/" />
+      <root url="jar://$KOTLIN_BUNDLED$/lib/kotlin-test-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
+===== ./.idea/workspace.xml =====
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="main.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/main.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="ToolWindowManager">
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+    </layout>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <option name="show-excluded-files" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="dart.analysis.tool.window.force.activate" value="true" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+</project>
+===== ./.idea/modules.xml =====
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/laza.iml" filepath="$PROJECT_DIR$/laza.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/laza_android.iml" filepath="$PROJECT_DIR$/android/laza_android.iml" />
+    </modules>
+  </component>
+</project>
