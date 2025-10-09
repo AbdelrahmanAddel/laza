@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:laza/core/common/app_text_styles.dart';
 import 'package:laza/core/constants/app_colors.dart';
 import 'package:laza/core/helper/spacing.dart';
-import 'package:laza/features/details/presentation/widgets/custom_text_row.dart';
+import 'package:laza/features/product_details/presentation/widgets/custom_text_row.dart';
 
 class SizeGuideList extends StatelessWidget {
   const SizeGuideList({super.key});

@@ -13,7 +13,7 @@ class CategoryCubit extends Cubit<CategoryState> {
       final categories = await categoryRepository.getCategories();
       emit(CategoriesLoaded(categories: categories));
     } on ServerException catch (errors) {
-      emit(ErrorToLoadCategories(message: errors.errorModel.detail ?? ''));
+      emit(ErrorToLoadCategories(message: errors.errorModel.getReadableMessage()));
     } catch (error) {
       print(error);
       emit(ErrorToLoadCategories(message: "SomeThing Wen't Wrong"));

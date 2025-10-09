@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:laza/core/helper/spacing.dart';
 import 'package:laza/features/reviews/domain/entities/review_entity.dart';
 import 'package:laza/features/reviews/presentation/widgets/review_details.dart';
@@ -6,7 +7,7 @@ import 'package:laza/features/reviews/presentation/widgets/review_header.dart';
 import 'package:laza/features/reviews/presentation/widgets/review_list.dart';
 
 class ReviewScreenBody extends StatelessWidget {
-  const ReviewScreenBody({super.key, required this.review, required this.productId});
+  const ReviewScreenBody({super.key, this.review, required this.productId});
   final ReviewsResponse? review;
   final String productId;
 
@@ -20,6 +21,7 @@ class ReviewScreenBody extends StatelessWidget {
             children: [
               ReviewHeader(),
               verticalSpace(38),
+              if (review?.reviewsCount == 0) Center(child: Text('No Review')),
               ReviewDetails(review: review, productId: productId),
 
               SizedBox(height: 30),

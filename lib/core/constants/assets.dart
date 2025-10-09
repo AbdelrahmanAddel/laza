@@ -10,11 +10,15 @@ class Assets {
 
   static const String imagesSvgCartIcon = "assets/images/svg/cartIcon.svg";
 
+  static const String imagesSvgDelivery = "assets/images/svg/delivery.svg";
+
   static const String imagesSvgHome = "assets/images/svg/home.svg";
 
   static const String imagesSvgMenuIcon = "assets/images/svg/menuIcon.svg";
 
   static const String imagesSvgSearchIcon = "assets/images/svg/searchIcon.svg";
+
+  static const String imagesSvgVisa = "assets/images/svg/visa.svg";
 
   static const String imagesSvgWallet = "assets/images/svg/wallet.svg";
 

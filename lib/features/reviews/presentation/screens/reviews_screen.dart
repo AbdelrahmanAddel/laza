@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:laza/core/common/app_text_styles.dart';
 import 'package:laza/di/dependency_injection.dart';
 import 'package:laza/features/reviews/presentation/cubit/review_cubit.dart';
 import 'package:laza/features/reviews/presentation/cubit/review_state.dart';
@@ -19,14 +20,24 @@ class ReviewsScreen extends StatelessWidget {
               current is LoadingToLoadReviews ||
               current is ReviewsLoaded ||
               current is ErrorToLoadReviews,
+
           builder: (context, state) {
             switch (state) {
               case LoadingToLoadReviews():
                 return const Center(child: CircularProgressIndicator());
               case ReviewsLoaded():
-                return ReviewScreenBody(review: state.reviewsResponse, productId: productId);
+                return ReviewScreenBody(
+                  review: state.reviewsResponse,
+                  productId: productId,
+                );
               case ErrorToLoadReviews():
-                return const Center(child: Text("Something went wrong"));
+                return Center(
+                  child: Text(
+                    state.message,
+                    style: AppTextStyle.we600Si28ColText,
+                  ),
+                );
+
               default:
                 return SizedBox.shrink();
             }

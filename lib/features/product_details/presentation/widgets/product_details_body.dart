@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:laza/core/helper/spacing.dart';
-import 'package:laza/features/details/presentation/widgets/details_screen_header.dart';
-import 'package:laza/features/details/presentation/widgets/product_details_info.dart';
+import 'package:laza/features/product_details/presentation/widgets/details_screen_header.dart';
+import 'package:laza/features/product_details/presentation/widgets/product_details_info.dart';
 import 'package:laza/core/common/widgets/custom_material_button.dart';
 import 'package:laza/features/home/domain/entities/product_entity.dart';
 
@@ -33,6 +33,7 @@ class ProductDetailsBody extends StatelessWidget {
             ],
           ),
           _productDetailsHeader(),
+          
         ],
       ),
     );
@@ -43,7 +44,7 @@ class ProductDetailsBody extends StatelessWidget {
       top: 40.h,
       left: 10.w,
       right: 10.w,
-      child: DetailsScreenHeader(),
+      child: DetailsScreenHeader(productId: product.id ?? ''),
     );
   }
 }

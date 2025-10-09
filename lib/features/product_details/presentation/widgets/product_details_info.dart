@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:laza/core/helper/spacing.dart';
-import 'package:laza/features/details/presentation/widgets/product_description.dart';
-import 'package:laza/features/details/presentation/widgets/product_details_header_info.dart';
-import 'package:laza/features/details/presentation/widgets/product_image_list.dart';
-import 'package:laza/features/details/presentation/widgets/size_guide_list.dart';
-import 'package:laza/features/details/presentation/widgets/reviews.dart';
-import 'package:laza/features/details/presentation/widgets/total_price.dart';
+import 'package:laza/features/product_details/presentation/widgets/product_description.dart';
+import 'package:laza/features/product_details/presentation/widgets/product_details_header_info.dart';
+import 'package:laza/features/product_details/presentation/widgets/product_image_list.dart';
+import 'package:laza/features/product_details/presentation/widgets/size_guide_list.dart';
+import 'package:laza/features/product_details/presentation/widgets/reviews.dart';
+import 'package:laza/features/product_details/presentation/widgets/total_price.dart';
 import 'package:laza/features/home/domain/entities/product_entity.dart';
 
 class ProductDetailsInfo extends StatelessWidget {

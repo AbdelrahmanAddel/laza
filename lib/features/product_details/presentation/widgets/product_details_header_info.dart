@@ -13,13 +13,17 @@ class ProductDetailsHeaderInfo extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
-              product.name ?? '',
-              style: AppTextStyle.we600Si28ColText.copyWith(fontSize: 22),
+            Flexible(
+              child: Text(
+                product.name ?? '',
+                style: AppTextStyle.we600Si28ColText.copyWith(fontSize: 22),
+                overflow: TextOverflow.ellipsis,
+              ),
             ),
             Text(
               '\$${product.price}',
               style: AppTextStyle.we600Si28ColText.copyWith(fontSize: 22),
+              overflow: TextOverflow.ellipsis,
             ),
           ],
         ),

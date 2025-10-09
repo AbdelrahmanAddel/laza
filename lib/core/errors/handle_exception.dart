@@ -5,7 +5,6 @@ import 'package:laza/core/errors/server_exception.dart';
 class HandleException {
   static void handle(DioException error) {
     final errorModel = ErrorModel.fromJson(error.response?.data);
-
     switch (error.type) {
       case DioExceptionType.connectionTimeout:
         throw ServerException(errorModel: errorModel);

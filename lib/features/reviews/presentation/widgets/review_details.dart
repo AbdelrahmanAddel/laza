@@ -37,13 +37,7 @@ class ReviewDetails extends StatelessWidget {
           ),
 
           onPressed: () {
-            Navigation.push(
-              AddReviewScreen(
-                productId: productId,
-                userId: 'a363e552-19f5-45c3-9c1c-ab6fb61fa37c',
-              ),
-              context,
-            );
+            Navigation.push(AddReviewScreen(productId: productId), context);
           },
           child: Row(
             children: [

@@ -4,7 +4,7 @@ import 'package:laza/core/common/widgets/review_item.dart';
 import 'package:laza/core/helper/navigation.dart';
 import 'package:laza/core/helper/spacing.dart';
 import 'package:laza/di/dependency_injection.dart';
-import 'package:laza/features/details/presentation/widgets/custom_text_row.dart';
+import 'package:laza/features/product_details/presentation/widgets/custom_text_row.dart';
 import 'package:laza/features/home/domain/entities/product_entity.dart';
 import 'package:laza/features/reviews/presentation/cubit/review_cubit.dart';
 import 'package:laza/features/reviews/presentation/cubit/review_state.dart';
@@ -38,11 +38,11 @@ class Reviews extends StatelessWidget {
                 case LoadingToLoadReviews():
                   return const Center(child: CircularProgressIndicator());
                 case ReviewsLoaded():
-                  return ReviewItem(
-                    review: state.reviewsResponse?.reviews?.items?[0],
-                  );
+                  return state.reviewsResponse?.reviewsCount==0?
+                  Center(child: Text('No Reviews Yet'),):
+                  ReviewItem(review: state.reviewsResponse?.reviews?.items?[0]);
                 case ErrorToLoadReviews():
-                  return const Center(child: Text('SomeThing Wen\'t Wrong'));
+                  return Center(child: Text(state.message));
                 default:
                   return SizedBox.shrink();
               }

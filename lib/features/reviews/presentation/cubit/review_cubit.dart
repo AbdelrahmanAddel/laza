@@ -11,11 +11,11 @@ class ReviewCubit extends Cubit<ReviewState> {
     emit(LoadingToLoadReviews());
     try {
       final reviewsResponse = await reviewRepository.getReviews(productId);
+
       emit(ReviewsLoaded(reviewsResponse: reviewsResponse));
     } on ServerException catch (errors) {
-      emit(ErrorToLoadReviews(message: errors.errorModel.detail ?? ''));
+      emit(ErrorToLoadReviews(message: errors.errorModel.getReadableMessage()));
     } catch (error) {
-      print(error);
       emit(ErrorToLoadReviews(message: "SomeThing Wen't Wrong"));
     }
   }

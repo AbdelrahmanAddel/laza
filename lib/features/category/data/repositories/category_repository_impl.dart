@@ -14,7 +14,6 @@ class CategoryRepositoryImpl implements CategoryRepository {
   Future<List<Category>>? getCategories() async {
     try {
       final response = await apiService.getCategories();
-      print('=>>>>>>> $response');
       return CategoryMapper.toEntity(response);
     } on DioException catch (error) {
       HandleException.handle(error);

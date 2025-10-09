@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:laza/core/constants/assets.dart';
+import 'package:laza/di/dependency_injection.dart';
+import 'package:laza/features/cart/presentation/cubit/cart_cubit.dart';
 
 class DetailsScreenHeader extends StatelessWidget {
-  const DetailsScreenHeader({super.key});
+  const DetailsScreenHeader({super.key, required this.productId});
+  final String productId;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +19,12 @@ class DetailsScreenHeader extends StatelessWidget {
           },
           child: SvgPicture.asset(Assets.imagesSvgBackIcon),
         ),
-        SvgPicture.asset(Assets.imagesSvgCartIcon),
+        GestureDetector(
+          onTap: () {
+            getIt<CartCubit>().addToCart(productId, 1);
+          },
+          child: SvgPicture.asset(Assets.imagesSvgCartIcon),
+        ),
       ],
     );
   }

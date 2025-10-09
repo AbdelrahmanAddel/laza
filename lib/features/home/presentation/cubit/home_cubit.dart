@@ -13,7 +13,7 @@ class HomeCubit extends Cubit<HomeState> {
       final products = await homeRepository.getProducts();
       emit(HomeProductsLoaded(products: products));
     } on ServerException catch (errors) {
-      emit(ErrorToLoadHomeProduct(message: errors.errorModel.detail ?? ''));
+      emit(ErrorToLoadHomeProduct(message: errors.errorModel.getReadableMessage()));
     } catch (error) {
       emit(ErrorToLoadHomeProduct(message: "SomeThing Wen't Wrong"));
     }

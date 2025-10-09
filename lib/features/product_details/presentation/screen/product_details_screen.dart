@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:laza/features/details/presentation/widgets/product_details_body.dart';
+import 'package:laza/features/product_details/presentation/widgets/product_details_body.dart';
 import 'package:laza/features/home/domain/entities/product_entity.dart';
 
 class ProductDetailsScreen extends StatelessWidget {
