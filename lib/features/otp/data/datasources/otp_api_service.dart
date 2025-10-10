@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:laza/api/api_constant.dart';
 import 'package:retrofit/retrofit.dart';
 import '../models/otp_request_model.dart';
+import '../models/resend_otp_request_model.dart';
 
 part 'otp_api_service.g.dart';
 
@@ -11,4 +12,7 @@ abstract class OtpApiService {
 
   @POST('/api/auth/verify-email')
   Future<void> validateOtp(@Body() OtpRequestModel request);
+
+  @POST('/api/auth/resend-otp')
+  Future<void> resendOtp(@Body() ResendOtpRequestModel request);
 }

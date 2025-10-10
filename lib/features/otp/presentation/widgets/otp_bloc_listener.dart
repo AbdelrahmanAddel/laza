@@ -19,6 +19,9 @@ class OTPBlocLister extends StatelessWidget {
             Navigation.pop(context);
             customShowToast('Success', context);
             Navigation.push(LoginScreen(), context);
+          case ResendOtpSuccess():
+            Navigation.pop(context);
+            customShowToast(state.message, context);
           case OtpFailure():
             Navigation.pop(context);
             customShowDialogErrorState(state.errors, context);

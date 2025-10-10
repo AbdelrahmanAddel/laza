@@ -1,10 +1,14 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:laza/core/common/app_text_styles.dart';
 import 'package:laza/core/constants/app_colors.dart';
+import 'package:laza/features/otp/data/models/resend_otp_request_model.dart';
+import 'package:laza/features/otp/presentation/cubit/otp_cubit.dart';
 
 class ResendOTP extends StatefulWidget {
-  const ResendOTP({super.key});
+  const ResendOTP({super.key, required this.email});
+  final String email;
 
   @override
   State<ResendOTP> createState() => _ResendOTPState();
@@ -34,6 +38,13 @@ class _ResendOTPState extends State<ResendOTP> {
     });
   }
 
+  void _resendOtp() {
+    context.read<OtpCubit>().resendOtp(
+      ResendOtpRequestModel(email: widget.email),
+    );
+    _startTimer();
+  }
+
   String _formatTime(int totalSeconds) {
     final minutes = totalSeconds ~/ 60;
     final seconds = totalSeconds % 60;
@@ -54,7 +65,7 @@ class _ResendOTPState extends State<ResendOTP> {
               style: ElevatedButton.styleFrom(
                 backgroundColor: AppColors.primaryColor,
               ),
-              onPressed: () {},
+              onPressed: _resendOtp,
               child: Text(
                 'Resend',
                 style: AppTextStyle.we400Si15ColGrey.copyWith(

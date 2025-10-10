@@ -3,6 +3,7 @@ import 'package:laza/core/errors/exceptions.dart';
 import 'package:laza/core/errors/handle_exception.dart';
 import 'package:laza/features/otp/data/datasources/otp_api_service.dart';
 import 'package:laza/features/otp/data/models/otp_request_model.dart';
+import 'package:laza/features/otp/data/models/resend_otp_request_model.dart';
 import 'package:laza/features/otp/domain/repositories/otp_repository.dart';
 
 class OtpRepositoryImpl implements OtpRepository {
@@ -18,6 +19,21 @@ class OtpRepositoryImpl implements OtpRepository {
     } on DioException catch (error) {
       HandleException.handle(error);
       rethrow;
+    } catch (e) {
+      throw UnExceptedServerException(
+        message: 'Unexpected error occurred',
+        statusCode: 500,
+      );
+    }
+  }
+
+  @override
+  Future<String> resendOtp(ResendOtpRequestModel request) async {
+    try {
+      await _otpApiService.resendOtp(request);
+      return 'OTP resent successfully';
+    } on DioException catch (_) {
+      return 'You are requesting this endpoint too frequently!';
     } catch (e) {
       throw UnExceptedServerException(
         message: 'Unexpected error occurred',

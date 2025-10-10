@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:laza/core/helper/shared_pref.dart';
 import 'package:laza/features/main/presentation/screen/main_screen.dart';
+import 'package:laza/features/otp/presentation/screen/otp_screen.dart';
 import 'package:laza/features/signup/presentation/screen/signup_screen.dart';
 
 class LazaApp extends StatelessWidget {
@@ -18,7 +19,7 @@ class LazaApp extends StatelessWidget {
         builder: (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
-            home: snapshot.data as bool ? SignupScreen() : MainScreen(),
+            home: snapshot.data as bool ? OTPScreen(email: 'sadiozmamy@gmail.com') : MainScreen(),
           );
         },
       ),

@@ -10,8 +10,9 @@ import 'package:laza/features/otp/presentation/widgets/otp_field.dart';
 import 'package:laza/features/otp/presentation/widgets/resend_otp.dart';
 
 class OTPScreenBody extends StatelessWidget {
-  const OTPScreenBody({super.key, required this.otpControllers});
+  const OTPScreenBody({super.key, required this.otpControllers, required this.email});
   final OtpControllers otpControllers;
+  final String email;
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +45,7 @@ class OTPScreenBody extends StatelessWidget {
                 verticalSpace(60),
                 OTPField(otpControllers: otpControllers),
                 verticalSpace(166),
-                ResendOTP(),
+                ResendOTP(email: email),
                 OTPBlocLister(),
               ],
             ),

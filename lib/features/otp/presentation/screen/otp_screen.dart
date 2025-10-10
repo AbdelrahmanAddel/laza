@@ -43,7 +43,10 @@ class _OTPScreenState extends State<OTPScreen> {
             }
           },
         ),
-        body: OTPScreenBody(otpControllers: otpControllers),
+        body: OTPScreenBody(
+          otpControllers: otpControllers,
+          email: widget.email,
+        ),
       ),
     );
   }

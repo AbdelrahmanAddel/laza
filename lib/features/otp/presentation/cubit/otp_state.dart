@@ -1,5 +1,4 @@
 
-
 sealed class OtpState {}
 
 final class OtpInitial extends OtpState {}
@@ -17,3 +16,9 @@ final class OtpFailure extends OtpState {
 }
 
 final class LoadingToOtp extends OtpState {}
+
+final class ResendOtpSuccess extends OtpState {
+  final String message;
+
+  ResendOtpSuccess({required this.message});
+}
