@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:laza/core/common/app_text_styles.dart';
 import 'package:laza/core/constants/app_colors.dart';
 
-class LoginRememberMe extends StatefulWidget {
-  const LoginRememberMe({super.key});
+class AuthRememberMe extends StatefulWidget {
+  const AuthRememberMe({super.key});
 
   @override
-  State<LoginRememberMe> createState() => _LoginRememberMeState();
+  State<AuthRememberMe> createState() => _AuthRememberMeState();
 }
 
-class _LoginRememberMeState extends State<LoginRememberMe> {
+class _AuthRememberMeState extends State<AuthRememberMe> {
   bool rememberMe = true;
   @override
   Widget build(BuildContext context) {

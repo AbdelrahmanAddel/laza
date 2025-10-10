@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:laza/core/helper/shared_pref.dart';
-import 'package:laza/features/login/presentation/screen/login_screen.dart';
-import 'package:laza/features/main/presentation/screen/main_screen.dart';
+import 'package:laza/features/signup/presentation/screen/signup_screen.dart';
 
 class LazaApp extends StatelessWidget {
   const LazaApp({super.key});
@@ -19,7 +17,8 @@ class LazaApp extends StatelessWidget {
         builder: (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
-            home: snapshot.data as bool ? LoginScreen() : MainScreen(),
+            home: SignupScreen(),
+            // home: snapshot.data as bool ? SignupScreen() : MainScreen(),
           );
         },
       ),

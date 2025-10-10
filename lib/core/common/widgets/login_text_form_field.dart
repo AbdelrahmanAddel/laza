@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:laza/core/common/form_field_validation.dart';
 
-class LoginTextFormFiled extends StatelessWidget {
-  const LoginTextFormFiled({
+class AuthTextFormFiled extends StatelessWidget {
+  const AuthTextFormFiled({
     super.key,
     required this.hintText,
     required this.labelText,

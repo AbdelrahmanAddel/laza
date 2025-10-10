@@ -24,7 +24,8 @@ String? Function(String?) textFormFieldValidator(TextFormFieldsType field) {
         final hasUpper = value.contains(RegExp(r'[A-Z]'));
         final hasLower = value.contains(RegExp(r'[a-z]'));
         final hasSpecial = value.contains(RegExp(r'[!@#\$%^&*(),.?":{}|<>]'));
-        if (!hasUpper || !hasLower || !hasSpecial) {
+        final hasNumber = value.contains(RegExp(r'[0-9]'));
+        if (!hasUpper || !hasLower || !hasSpecial || !hasNumber) {
           return 'Password must include upper, lower, and special characters';
         }
         return null;

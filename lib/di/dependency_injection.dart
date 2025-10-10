@@ -25,6 +25,10 @@ import 'package:laza/features/cart/data/datasources/cart_api_service.dart';
 import 'package:laza/features/cart/data/repositories/cart_repository_impl.dart';
 import 'package:laza/features/cart/domain/repositories/cart_repository.dart';
 import 'package:laza/features/cart/presentation/cubit/cart_cubit.dart';
+import 'package:laza/features/signup/data/datasources/signup_api_service.dart';
+import 'package:laza/features/signup/data/repositories/signup_repository_impl.dart';
+import 'package:laza/features/signup/domain/repositories/signup_repository.dart';
+import 'package:laza/features/signup/presentation/cubit/signup_cubit.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 final getIt = GetIt.instance;
@@ -32,6 +36,7 @@ final getIt = GetIt.instance;
 Future<void> setup() async {
   Dio dio = await DioFactory.getDio();
   _login(dio);
+  _signup(dio);
   _home(dio);
   _category(dio);
   _reviews(dio);
@@ -44,7 +49,15 @@ _login(Dio dio) {
   getIt.registerLazySingleton<LoginRepository>(
     () => LoginRepositoryImpl(getIt()),
   );
-  getIt.registerSingleton<LoginCubit>( LoginCubit(getIt()));
+  getIt.registerSingleton<LoginCubit>(LoginCubit(getIt()));
+}
+
+_signup(Dio dio) {
+  getIt.registerLazySingleton<SignupApiService>(() => SignupApiService(dio));
+  getIt.registerLazySingleton<SignupRepository>(
+    () => SignupRepositoryImpl(getIt()),
+  );
+  getIt.registerSingleton<SignupCubit>(SignupCubit(getIt()));
 }
 
 _home(Dio dio) {

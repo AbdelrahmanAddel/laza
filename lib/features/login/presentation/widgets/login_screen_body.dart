@@ -7,7 +7,7 @@ import 'package:laza/features/login/presentation/controllers/login_controllers.d
 import 'package:laza/features/login/presentation/widgets/login_header.dart';
 import 'package:laza/features/login/presentation/widgets/login_form_fields.dart';
 import 'package:laza/features/login/presentation/widgets/login_forget_password.dart';
-import 'package:laza/features/login/presentation/widgets/login_remember_me.dart';
+import 'package:laza/core/common/widgets/login_remember_me.dart';
 import 'package:laza/features/login/presentation/widgets/term_and_condition.dart';
 import 'package:laza/features/login/presentation/widgets/login_bloc_listener.dart';
 
@@ -31,7 +31,7 @@ class LoginScreenBody extends StatelessWidget {
               verticalSpace(30),
               LoginForgetPassword(),
               verticalSpace(40),
-              LoginRememberMe(),
+              AuthRememberMe(),
               verticalSpace(107),
               TermAndCondition(),
               LoginBlocListener(),
