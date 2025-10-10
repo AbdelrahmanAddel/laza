@@ -20,7 +20,7 @@ class SignupRepositoryImpl implements SignupRepository {
       HandleException.handle(e);
       rethrow;
     } catch (e) {
-      throw ServerException(
+      throw UnExceptedServerException(
         message: 'Unexpected error occurred',
         statusCode: 500,
       );

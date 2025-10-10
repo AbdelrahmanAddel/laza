@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fluttertoast/fluttertoast.dart';
-import 'package:laza/core/common/app_text_styles.dart';
+import 'package:laza/core/common/widgets/custom_show_dialog.dart';
+import 'package:laza/core/common/widgets/custom_show_toast.dart';
 import 'package:laza/core/helper/navigation.dart';
-import 'package:laza/features/login/presentation/screen/login_screen.dart';
+import 'package:laza/features/otp/presentation/screen/otp_screen.dart';
+import 'package:laza/features/signup/presentation/controllers/signup_controllers.dart';
 import 'package:laza/features/signup/presentation/cubit/signup_cubit.dart';
 import 'package:laza/features/signup/presentation/cubit/signup_state.dart';
 
 class SignupBlocListener extends StatelessWidget {
-  const SignupBlocListener({super.key});
+  const SignupBlocListener({super.key, required this.email});
+  final   SignupControllers email;
 
   @override
   Widget build(BuildContext context) {
@@ -22,12 +24,15 @@ class SignupBlocListener extends StatelessWidget {
         switch (state) {
           case SignupSuccess():
             Navigation.pop(context);
-            _showToast(state.message, context);
+            customShowToast(state.message, context);
 
-            Navigation.push(LoginScreen(), context);
+            Navigation.push(
+              OTPScreen(email: email.emailController.text),
+              context,
+            );
           case SignupFailure():
             Navigation.pop(context);
-            _errorState(state.errors, context);
+            customShowDialogErrorState(state.errors, context);
           case LoadingToSignup():
             showDialog(
               context: context,
@@ -40,36 +45,6 @@ class SignupBlocListener extends StatelessWidget {
         }
       },
       child: const SizedBox.shrink(),
-    );
-  }
-
-  Future<dynamic> _errorState(String error, BuildContext context) {
-    return showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        icon: const Icon(Icons.error, color: Colors.red, size: 32),
-        content: Text(error, style: AppTextStyle.we500Si17ColText),
-        actions: [
-          TextButton(
-            onPressed: () {
-              Navigation.pop(context);
-            },
-            child: Text('Got it', style: AppTextStyle.we600Si28ColText),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Future<bool?> _showToast(String message, BuildContext context) {
-    return Fluttertoast.showToast(
-      msg: message,
-      toastLength: Toast.LENGTH_SHORT,
-      gravity: ToastGravity.CENTER,
-      timeInSecForIosWeb: 4,
-      backgroundColor: Colors.lightGreen,
-      textColor: Colors.white,
-      fontSize: 16.0,
     );
   }
 }

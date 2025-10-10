@@ -14,7 +14,7 @@ class CartCubit extends Cubit<CartState> {
     try {
       await cartRepository.addToCart(productId, quantity);
       emit(AddToCartSuccess());
-    } on ServerException catch (error) {
+    } on UnExceptedServerException catch (error) {
       emit(AddToCartFailure(message: error.message));
     } catch (e) {
       emit(AddToCartFailure(message: e.toString()));
@@ -26,7 +26,7 @@ class CartCubit extends Cubit<CartState> {
     try {
       final cart = await cartRepository.getCart();
       emit(GetCartSuccess(cart: cart));
-    } on ServerException catch (error) {
+    } on UnExceptedServerException catch (error) {
       emit(GetCartFailure(message: error.message));
     } catch (e) {
       emit(GetCartFailure(message: e.toString()));

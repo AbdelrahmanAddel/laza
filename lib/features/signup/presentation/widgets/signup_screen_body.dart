@@ -30,7 +30,7 @@ class SignupScreenBody extends StatelessWidget {
               SignupFormFields(controllers: controllers),
               verticalSpace(40),
               AuthRememberMe(),
-              SignupBlocListener(),
+              SignupBlocListener(email: controllers),
             ],
           ),
         ),

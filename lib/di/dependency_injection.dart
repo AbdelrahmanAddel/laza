@@ -29,6 +29,10 @@ import 'package:laza/features/signup/data/datasources/signup_api_service.dart';
 import 'package:laza/features/signup/data/repositories/signup_repository_impl.dart';
 import 'package:laza/features/signup/domain/repositories/signup_repository.dart';
 import 'package:laza/features/signup/presentation/cubit/signup_cubit.dart';
+import 'package:laza/features/otp/data/datasources/otp_api_service.dart';
+import 'package:laza/features/otp/data/repositories/otp_repository_impl.dart';
+import 'package:laza/features/otp/domain/repositories/otp_repository.dart';
+import 'package:laza/features/otp/presentation/cubit/otp_cubit.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 final getIt = GetIt.instance;
@@ -37,6 +41,7 @@ Future<void> setup() async {
   Dio dio = await DioFactory.getDio();
   _login(dio);
   _signup(dio);
+  _otp(dio);
   _home(dio);
   _category(dio);
   _reviews(dio);
@@ -58,6 +63,14 @@ _signup(Dio dio) {
     () => SignupRepositoryImpl(getIt()),
   );
   getIt.registerSingleton<SignupCubit>(SignupCubit(getIt()));
+}
+
+_otp(Dio dio) {
+  getIt.registerLazySingleton<OtpApiService>(() => OtpApiService(dio));
+  getIt.registerLazySingleton<OtpRepository>(
+    () => OtpRepositoryImpl(getIt()),
+  );
+  getIt.registerSingleton<OtpCubit>(OtpCubit(getIt()));
 }
 
 _home(Dio dio) {

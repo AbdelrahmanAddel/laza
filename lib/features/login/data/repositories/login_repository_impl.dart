@@ -16,11 +16,11 @@ class LoginRepositoryImpl implements LoginRepository {
     try {
       final response = await _loginApiService.login(request);
       return response;
-    } on DioException catch (e) {
-      HandleException.handle(e);
+    } on DioException catch (error) {
+      HandleException.handle(error);
       rethrow;
     } catch (e) {
-      throw ServerException(
+      throw UnExceptedServerException(
         message: 'Unexpected error occurred',
         statusCode: 500,
       );

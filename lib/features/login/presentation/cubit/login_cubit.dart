@@ -16,8 +16,8 @@ class LoginCubit extends Cubit<LoginState> {
     try {
       final response = await _login.login(loginModel);
       emit(LoginSuccess(loginResponse: response));
-    } on ServerException catch (e) {
-      emit(LoginFailure(errors: e.errorModel.getReadableMessage()));
+    } on ServerException catch (error) {
+      emit(LoginFailure(errors: error.errorModel.getReadableMessage()));
     }
   }
 }

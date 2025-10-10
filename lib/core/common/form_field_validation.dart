@@ -1,4 +1,4 @@
-enum TextFormFieldsType { email, password, description, name }
+enum TextFormFieldsType { email, password, description, name  ,otp}
 
 String? Function(String?) textFormFieldValidator(TextFormFieldsType field) {
   switch (field) {
@@ -47,6 +47,15 @@ String? Function(String?) textFormFieldValidator(TextFormFieldsType field) {
           return 'Please enter your name';
         } else if (value.length < 3) {
           return 'Name must be at least 3 characters';
+        }
+        return null;
+      };
+    case TextFormFieldsType.otp:
+      return (value) {
+        if (value == null || value.isEmpty) {
+          return 'Please enter your otp';
+        } else if (value.length < 4) {
+          return 'Otp must be at least 4 characters';
         }
         return null;
       };
